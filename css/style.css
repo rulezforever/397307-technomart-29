@@ -2,25 +2,33 @@
 
 :root {
   --basic-red: #EE3643;
+  --hover-red:#CA2C37;
+  --error:#BA2732;
   --basic-green: #63A63E;
+  --green-action:#518534;
   --basic-grey: #3D546F;
   --basic-greylight: #C5C5C5;
   --basic-extra-light: #f8f5f2;
   --basic-background: #F1F5F7;
   --white:#ffffff;
+  --white-opacity: rgba(255, 255, 255, 0.5);
   --black:#000000;
+  --black-opacity:  rgba(0, 0, 0, 0.15);
+  --black-opasity2:  rgba(0, 0, 0, 0.25);
   --special-yellow:#FFBF47;
+  --special-yellowbright: #FFC047;
   --special-blue:#3BBCE3;
   --special-lilac:#DC91D8;
   --special-greenlight:#8ED78F;
   --special-yellowlight:#FFD180;
   --success:#5FBB2D;
-  --warning:#FFBF47;
-  --error:#BA2732;
   --grey-light:#EAEAEA;
+  --grey-action:#1D2739;
   --grey-dark:#32425C;
   --grey-deepdark:#293449;
+  --grey-strong:#161D29;
   --light-grey: #A9A9A9;
+  --white-cream: #F3F7F9;
 }
 
 /* Global */
@@ -54,31 +62,34 @@ img {
   margin: -1px;
 }
 
+/* Header */
+
 /* Main navigation */
 
-.main-navigation {
+.main-navigation,
+.footer-navigation-top,
+.footer-navigation-bottom {
   color: var(--white);
   background-color: var(--grey-dark);
 }
 
-.site-navigation,
-.registration-list {
-  list-style: none;
+.site-navigation a,
+.footer-navigation-top a {
+  color: var(--white);
 }
 
-.site-navigation a {
-  color: var(--white);
+.footer-navigation-bottom a,
+.create a,
+.mailto {
+  color: var(--special-yellowlight);
 }
 
 .site-navigation a:hover,
 .site-navigation a:focus {
   background-color: var(--grey-deepdark);
 }
-
-/* Header */
-
 .top-panel {
-  
+
   background-color: var(--grey-deepdark);
 }
 
@@ -86,10 +97,10 @@ img {
   color: var(--white);
 }
 
-.cart {
+.order {
   background-color: var(--basic-green);
 }
- 
+
 .phone {
   color: var(--basic-red);
 }
@@ -109,10 +120,6 @@ img {
   font-size: 21px;
   line-height: 21px;
 }
-/* .top-panel a:hover,
-.top-panel a:focus {
-  background-color: var(--grey-deepdark);
-} */
 
 /* Main */
 
@@ -122,19 +129,31 @@ img {
 }
 
 .products-list h3 {
-  /* background-color: transparent;*/
-  background-color: var(--basic-green); 
   color: var(--white);
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
 }
+.products-item:nth-of-type(1) {
+  background-color: var(--special-yellow);
+}
+.products-item:nth-of-type(2) {
+  background-color: var(--special-blue);
+}
+.products-item:nth-of-type(3) {
+  background-color: var(--special-lilac);
+}
+.products-item:nth-of-type(4) {
+  background-color: var(--special-greenlight);
+}
+.products-item:nth-of-type(5) {
+  background-color: var(--special-yellowbright);
+}
 
 .products-item a {
-  background: #FFFFFF;
+  background: var(--white);
   mix-blend-mode: normal;
   opacity: 0.3;
-  color: black;
   /* color: var(--white); */
   font-size: 14px;
   line-height: 18px;
@@ -147,14 +166,12 @@ img {
   line-height: 36px;
   color: var(--white);
   text-transform: uppercase;
-  /* background-color: transparent;*/
-  background-color: var(--basic-green); 
+  background: var(--black-opasity2);
 }
 
 .slider-item p {
   color: var(--white);
-  /* background-color: transparent;*/
-  background-color: var(--basic-green); 
+  background: var(--black-opasity2);
 }
 
 .popular-products h2 {
@@ -163,6 +180,19 @@ img {
   line-height: 30px;
   color: var(--grey-dark);
   text-transform: uppercase;
+}
+
+.site-navigation,
+.footer-navigation-list,
+.social-list,
+.footer-contacts-list,
+.registration-list,
+.popular-products-list,
+.popular-fabric-list,
+.services-names-list,
+.services-description-list,
+.information-about-list {
+  list-style: none;
 }
 
 .popular-products-item h3 {
@@ -193,31 +223,247 @@ color: var(--black);
   line-height: 18px;
   text-transform: uppercase;
   color: var(--white);
-  background-color: var(--basic-red); 
+  background-color: var(--basic-red);
 }
 
+.popular-fabric h2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--grey-dark);
+}
 
-/* Button
+.services h2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.services-message {
+  font-family: "PT Sans",Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--black);
+}
+
+.services-button {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  background-color: var(--grey-dark);
+  color: var(--white);
+}
+
+.service {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--grey-dark);
+}
+
+.service-description {
+  font-family: "PT Sans",Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--black);
+}
+
+/* Contacts*/
+
+.information-about h3,
+.information-contacts h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.information-about p,
+.information-contacts p {
+  font-family: "PT Sans",Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--black);
+}
+
+.information-about-item {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--black);
+}
+
+.footer-contacts {
+  color: var(--white-cream);
+  background-color: var(--grey-dark);
+}
+
+.footer-copy,
+.social-button,
+.email,
+.create {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--white);
+  background-color: var(--grey-deepdark);
+}
+
+.mailto {
+  background-color: var(--grey-deepdark);
+  font-style: normal;
+}
+ /* Buttons */
 
 .button {
   font: inherit;
   text-align: center;
-  color: var(--basic-white);
+  vertical-align: middle;
+  border: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--white);
   vertical-align: middle;
   text-transform: uppercase;
-  background-color: var(--basic-black);
-  border: none;
+  background-color: var(--basic-red);
+}
+.button:hover {
+  background-color: var(--hover-red);
 }
 
-.button:hover,
-.button:focus,
-.button:active {
-  background-color: var(--special);
+.button:action {
+  background-color: var(--error);
 }
 
-.button.disabled,
-.button:disabled {
-  cursor: default;
+
+.login-button:hover,
+.footer-url:focus,
+.footer-url:active,
+.mailto:focus,
+.mailto:active {
+  color: var(--basic-red);
+}
+
+.login-button:focus,
+.login-button-active {
+  color: var(--basic-greylight);
+}
+
+.site-navigation-button:hover,
+.services-button:hover {
+  background-color: var(--grey-deepdark);
+}
+
+.site-navigation-button:focus,
+.site-navigation-button:active {
+  background-color: var(--grey-action);
   opacity: 0.5;
-  background-color: var(--basic-black);
-} */
+}
+
+.products-button:hover {
+  background-color: var(--basic-greylight);
+}
+
+.products-button:focus,
+.products-button:action {
+  background-color: var(--light-grey);
+}
+
+.products-buy-button {
+  background-color: var(--basic-green);
+}
+
+.products-buy-button:hover {
+  background-color: var(--success);
+}
+
+.products-buy-button:action,
+.products-buy-button:focus {
+  background-color: var(--green-action);
+}
+
+.products-fav-button {
+  color:var(--grey-dark);
+  border: 3px solid var(--basic-green);
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: var(--white);
+}
+
+.products-fav-button:hover {
+  border: 3px solid var(--grey-dark);
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: var(--white);
+}
+
+.products-fav-button:focus,
+.products-fav-button:action {
+  border: 3px solid var(--grey-dark);
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: var(--white);
+  opacity: 0.5;
+  /* не срабатывает прозрачность,не пойму,где ошибка? */
+}
+
+.footer-navigation-button:hover,
+.mailto:hover,
+.footer-url:hover {
+  text-decoration-line: underline;
+}
+
+.footer-navigation-button:focus,
+.footer-navigation-button:active {
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.services-button:focus {
+  background-color: var(--white);
+  color: var(--grey-dark);
+}
+
+.fabric-button:hover {
+  filter: drop-shadow(0px 4px 20px var(--black-opacity));
+}
+
+.fabric-button:focus,
+.fabric-button:active {
+  opacity: 0.5;
+  filter: drop-shadow(0px 4px 20px var(--black-opacity));
+}
+
+.order:hover {
+background-color: var(--success);
+}
+
+.order:focus,
+.order:active {
+  background-color: var(--basic-green);
+  color: var(--white-opacity);
+}
+
+.favorite:focus,
+.favorite:active,
+.cart:focus,
+.cart:active {
+  background-color: var(--grey-strong);
+  color: var(--white-opacity);
+}
