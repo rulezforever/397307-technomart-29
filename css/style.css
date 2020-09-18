@@ -174,7 +174,8 @@ img {
   background: var(--black-opasity2);
 }
 
-.popular-products h2 {
+.popular-products h2,
+.perforators h2 {
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
@@ -191,7 +192,9 @@ img {
 .popular-fabric-list,
 .services-names-list,
 .services-description-list,
-.information-about-list {
+.information-about-list,
+.breadcrumbs,
+.pagination-list {
   list-style: none;
 }
 
@@ -235,7 +238,8 @@ color: var(--black);
   color: var(--grey-dark);
 }
 
-.services h2 {
+.services h2,
+.details h2 {
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -244,7 +248,8 @@ color: var(--black);
   color: var(--black);
 }
 
-.services-message {
+.services-message,
+.details-message {
   font-family: "PT Sans",Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -466,4 +471,39 @@ background-color: var(--success);
 .cart:active {
   background-color: var(--grey-strong);
   color: var(--white-opacity);
+}
+
+/* Catalog-page */
+
+.breadcrumbs li,
+.pagination-item a {
+  font-family: "PT Sans",Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+.pagination-item-current a {
+  color: var(--white);
+  background-color: var(--basic-red);
+}
+
+/* Modal pages */
+
+/* Modal-cart */
+
+.modal-cart p {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.button-next {
+  color: var(--black);
+  background-color: var(--white);
 }
