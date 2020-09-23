@@ -79,16 +79,91 @@ img {
   outline-offset: -5px; */
 }
 .main-header-logo {
-  /* outline: 5px solid rgba(224, 240, 6, 0.87);
-  outline-offset: -5px; */
+  width: 220px;
+  height: 47px;
 }
 
 .top-panel-wrapper {
   width: 940px;
-  display: grid;
-  /* grid-template-columns: auto auto auto auto auto; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
   /* padding: 0 10px; */
+}
+.bottom-panel {
+  width: 940px;
+  display: flex;
+  justify-content: space-between;
+  margin: 46px auto;
+}
+.bottom-panel-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  width: 270px;
+  
+}
+
+.registration-list  { 
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+}
+
+.main-navigation {
+  display: flex;
+  align-items: center;
+  width: 940px;
+  height: 60px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+.site-navigation {
+  display: flex;
+  justify-content: space-around;
+  width: 940px;
+  margin: 0 auto;
+  padding:0;
+}
+
+.footer-panel-top {
+  background-color: var(--grey-dark); 
+}
+
+.footer-panel-bottom {
+  background-color: var(--grey-deepdark); 
+}
+
+.center {
+  width: 940px;
+  display: flex;
+  justify-content: space-between;
+  margin: 46px auto;
+  /* background-color: var(--grey-dark); */
+}
+
+.footer-navigation-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-navigation-list {
+  display: flex;
+  width: 547px;
+  justify-content: space-around;
+  
+}
+
+.footer-navigation-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-contacts-list {
+  display: flex;
+  width: 524px;
+  justify-content: space-around;
 }
 .container {
   width: 940px;
@@ -182,8 +257,7 @@ img {
 /* Main navigation */
 
 .main-navigation,
-.footer-navigation-top,
-.footer-navigation-bottom {
+.footer-navigation-top {
   color: var(--white);
   background-color: var(--grey-dark);
 }
@@ -205,6 +279,8 @@ img {
 }
 .top-panel {
   background-color: var(--grey-deepdark);
+  height: 42px;
+  display: flex;
 }
 
 .top-panel a {
@@ -213,6 +289,9 @@ img {
 
 .order {
   background-color: var(--basic-green);
+  width: 150px;
+  /* height: 42px; */
+  text-align: center;
 }
 
 .phone {
@@ -429,7 +508,7 @@ color: var(--black);
 
 .footer-contacts {
   color: var(--white-cream);
-  background-color: var(--grey-dark);
+  /* background-color: var(--grey-dark); */
 }
 
 .footer-copy,
