@@ -73,11 +73,7 @@ img {
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 }
-.main-header {
-  /* margin-bottom: 70px; */
-  /* outline: 5px solid rgba(0, 255, 0, 0.7);
-  outline-offset: -5px; */
-}
+
 .main-header-logo {
   width: 220px;
   height: 47px;
@@ -101,10 +97,10 @@ img {
   display: grid;
   grid-template-rows: 1fr 1fr;
   width: 270px;
-  
+
 }
 
-.registration-list  { 
+.registration-list  {
   display: flex;
   justify-content: space-between;
   width: 280px;
@@ -127,18 +123,20 @@ img {
 }
 
 .footer-panel-top {
-  background-color: var(--grey-dark); 
+  background-color: var(--grey-dark);
+  height: 193px;
 }
 
 .footer-panel-bottom {
-  background-color: var(--grey-deepdark); 
+  background-color: var(--grey-deepdark);
+  height: 107px;
 }
 
 .center {
   width: 940px;
   display: flex;
   justify-content: space-between;
-  margin: 46px auto;
+  margin: 0 auto;
   /* background-color: var(--grey-dark); */
 }
 
@@ -151,7 +149,7 @@ img {
   display: flex;
   width: 547px;
   justify-content: space-around;
-  
+
 }
 
 .footer-navigation-bottom {
@@ -165,14 +163,23 @@ img {
   width: 524px;
   justify-content: space-around;
 }
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  width: 225px;
+}
+.email {
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   width: 940px;
   margin: 0 auto;
   /* padding: 0 10px; */
 }
-.products-item {
-  /* margin-bottom: 80px; */
-}
+
 .products-list {
   margin: 0;
   padding: 0;
@@ -188,29 +195,27 @@ img {
   margin-bottom: 180px;
 }
 .material {
-
   grid-area: material;
 }
 .instrument {
-
   grid-area: instrument;
 }
-.technics {
 
+.technics {
   grid-area: technics;
 }
 .sale {
-
   grid-area: sale;
 }
-.shipping {
 
+.shipping {
   grid-area: shipping;
 }
+
 .slider-collection {
-  outline: 5px solid rgba(224, 240, 6, 0.87);
   grid-area: slider;
 }
+
 .slider-list,
 .slider-item h3,
 .slider-item p,
