@@ -90,7 +90,6 @@ img {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  /* padding: 0 10px; */
 }
 .bottom-panel {
   width: 940px;
@@ -133,15 +132,11 @@ img {
 .footer-panel-top {
   background-color: var(--grey-dark);
   height: 193px;
-  /* outline: 5px solid rgba(0, 255, 0, 0.7);
-  outline-offset: -5px; */
 }
 
 .footer-panel-bottom {
   background-color: var(--grey-deepdark);
   height: 107px;
-  /* outline: 5px solid rgba(0, 255, 0, 0.7);
-  outline-offset: -5px; */
 }
 
 .center {
@@ -149,7 +144,6 @@ img {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  /* background-color: var(--grey-dark); */
 }
 
 .footer-navigation-top {
@@ -189,7 +183,6 @@ img {
 .container {
   width: 940px;
   margin: 0 auto;
-  /* padding: 0 10px; */
 }
 
 /* Catalog */
@@ -201,7 +194,6 @@ img {
 
 .filters {
   width: 220px;
-  /* margin-right: 20px; */
 }
 
 .perforators {
@@ -210,15 +202,21 @@ img {
 
 .popular-catalog-list {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 .popular-catalog-list .popular-products-item {
-  min-width: 220px;
+  width: 220px;
   margin-bottom: 18px;
-  margin-right: 20px;
+  margin-right: 10px;
+
+}
+.popular-catalog-list .popular-products-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .breadcrumbs {
@@ -231,17 +229,13 @@ img {
 .catalog-wrapper {
   width: 940px;
   margin: 0 auto;
-  /* outline: 5px solid rgba(0, 255, 0, 0.7);
-  outline-offset: -5px; */
-  /* padding-top: 64px; */
 }
 
 .details {
   min-width: 1200px;
   background-color: var(--basic-background);
-  /* outline: 5px solid rgba(0, 255, 0, 0.7);
-  outline-offset: -5px; */
 }
+
 .details-wrapper {
   min-height: 261px;
   background-color: var(--basic-background);
@@ -433,7 +427,6 @@ img {
   background: var(--white);
   mix-blend-mode: normal;
   opacity: 0.3;
-  /* color: var(--white); */
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -595,7 +588,6 @@ color: var(--black);
 
 .footer-contacts {
   color: var(--white-cream);
-  /* background-color: var(--grey-dark); */
 }
 
 .footer-copy,
