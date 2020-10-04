@@ -17,7 +17,7 @@
     <div class="top-panel">
       <div class="top-panel-wrapper">
         <a class="main-header-logo" href=""><img src="img/logo.svg" width="220" height="47" alt="Логотип Техномарт"></a>
-        <form action="#" method="POST">
+        <form class="search-form" action="#" method="POST">
           <input type="search" placeholder="Поиск:">
         </form>
         <a class="favorite" href="">Закладки</a>
@@ -31,9 +31,9 @@
         <a class="phone" href="tel:+7(812)555-05-05">+7(812)555-05-05</a>
         <p class="address">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
       </div>
-      <ul class="registration-list">
-        <li class="registration-item"><a class="login-button" href="">Войти</a></li>
-        <li class="registration-item"><a class="login-button" href="">Регистрация</a></li>
+      <ul class="registration-list registration-list-main">
+        <li class="registration-item"><a class="login-button enter-button" href="">Войти</a></li>
+        <li class="registration-item"><a class="login-button registration-button" href="">Регистрация</a></li>
       </ul>
     </div>
     <nav class="main-navigation">
@@ -104,8 +104,10 @@
 
     </section>
     <section class="popular-products">
+      <div class="popular-products-wrapper">
       <h2>Популярные товары:</h2>
       <a class="button popular-products-action" href="">Все популярные товары</a>
+    </div>
       <ul class="popular-products-list">
         <li>
           <article class="popular-products-item">
@@ -152,9 +154,10 @@
       </ul>
     </section>
     <section class="popular-fabric">
+      <div class="popular-fabric-wrapper">
       <h2>Популярные производители:</h2>
-
-      <a class="popular-fabric-action" href="">Все производители</a>
+      <a class="button popular-fabric-action" href="">Все производители</a>
+    </div>
       <ul class="popular-fabric-list">
         <li class="popular-fabric-item"><a class="fabric-button" href=""><img src="img/bosh.png" width="220"
               height="145" alt="logo bosh"></a>
@@ -288,9 +291,9 @@
       <div class="center">
         <p class="footer-copy">&copy; 2010-2019 Компания &laquo;Техномарт&raquo;<br>Все права защищены</p>
         <ul class="social-list">
-          <li><a class="social-button" href="#">Вконтакте</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
+          <li><a class="social-button vk-button" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+          <li><a class="social-button fb-button" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+          <li><a class="social-button instagram-button" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
         </ul>
         <div class="email">
           <p>Обратная связь:</p>
