@@ -68,9 +68,29 @@
         <aside class="filters">
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+            <fieldset class="filter-item">
+              <legend>Цена:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">
+                    <input type="number" name="min-price" value="0">
+                  </label>
+                  <label class="max-price">
+                    - <input type="number" name="max-price" value="30000">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
             <fieldset>
               <legend>Производители:</legend>
-              <ul>
+              <ul class="checkbox-list">
                 <li class="filter-option filter-checkbox">
                   <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="bosch"
                     id="filter-bosh" checked>
@@ -100,7 +120,7 @@
             </fieldset>
             <fieldset>
               <legend>Питание:</legend>
-              <ul>
+              <ul class="radio-list">
                 <li class="filter-option filter-radio">
                   <input class="visually-hidden filter-input-radio filter-input" type="radio" name="power"
                     value="battery" id="filter-battery" checked>
