@@ -49,7 +49,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   font-weight: normal;
-  color: black;
+  color: var(--black);
   background-color: var(--white);
   background-repeat: no-repeat;
 }
@@ -431,6 +431,9 @@ img {
 .footer-navigation-top {
   color: var(--white);
   background-color: var(--grey-dark);
+
+}
+.main-navigation {
   box-shadow: inset 0px -5px 0px #293449;
 }
 
@@ -459,6 +462,9 @@ img {
   display: flex;
   /* outline: 5px solid rgba(0, 255, 0, 0.7);
   outline-offset: -5px; */
+  margin: 0;
+  padding: 0;
+
 }
 
 .top-panel a {
@@ -531,9 +537,20 @@ img {
 }
 .search-form {
   position: relative;
-  background-color: var(--grey-deepdark);
+  /* background-color: var(--grey-deepdark); */
   margin-left: 35px;
 }
+.search-form input[type=search] {
+  color: var(--white);
+  background: var(--grey-deepdark);
+  border:none;
+  /* -webkit-appearance: none; */
+}
+
+.search-form input::placeholder {
+  color: var(--white);
+}
+
 .search-form::before {
   content: "";
   width: 17px;
@@ -544,6 +561,21 @@ img {
   position: absolute;
   top: 5px;
   left: -25px;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+.search-form:hover:before,
+.search-form:focus:before,
+.favorite:hover:before,
+.favorite:focus:before,
+.cart:hover:before,
+.cart:focus:before {
+  opacity: 1;
+}
+
+.cart:action:before,
+.favorite:action:before {
+  opacity: 0.3;
 }
 
 .favorite {
@@ -566,6 +598,8 @@ img {
   position: absolute;
   top: 12px;
   left: 10px;
+  mix-blend-mode: normal;
+  opacity: 0.3;
 }
 .cart {
   position: relative;
@@ -584,6 +618,8 @@ img {
   position: absolute;
   top: 5px;
   left: -20px;
+  mix-blend-mode: normal;
+  opacity: 0.3;
 }
 
 .registration-item a {
@@ -870,6 +906,10 @@ text-align: center;
   text-transform: uppercase;
   color: var(--grey-dark);
 }
+.services {
+  /* height: 522px; */
+  background-color: var(--basic-background);
+}
 
 .services h2,
 .details h2 {
@@ -898,6 +938,8 @@ text-align: center;
   line-height: 30px;
   background-color: var(--grey-dark);
   color: var(--white);
+  width: 240px;
+  height: 61px;
 }
 
 .service {
@@ -1124,22 +1166,20 @@ background-color: var(--success);
   background-image: url("/img/Вконтакте.svg");
   position: absolute;
   background-position: center;
-
 }
 
 .fb-button::before {
   background-image: url("/img/Фейсбук.svg");
   position: absolute;
   background-position: center;
-
 }
 
 .instagram-button::before {
   background-image: url("/img/Инстаграм.svg");
   position: absolute;
   background-position: center;
-
 }
+
 /* Catalog-page */
 
 .breadcrumbs li,
