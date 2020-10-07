@@ -38,6 +38,8 @@
   --range: #ABABAB;
   --range-shadow: #CFCFCF;
   --range-toggle:#00CA74;
+  --modal-grey: #F4F4F4;
+  --modal-background: #F1F1F1;
 }
 
 /* Global */
@@ -409,11 +411,12 @@ img {
 }
 .services-columns {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 240px 619px;
+  grid-template-rows: ;
   column-gap: 80px;
   margin: 0;
   padding: 0;
-  margin-bottom: 70px;
+  /* margin-bottom: 70px; */
 }
 .information {
   display: grid;
@@ -921,6 +924,55 @@ text-align: center;
   color: var(--black);
 }
 
+.services h2 {
+  padding-top: 64px;
+}
+
+.services-message {
+  padding-top: 25px;
+}
+
+.services-names-list {
+  padding-top: 70px;
+  position: relative;
+  /* outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px; */
+}
+
+.services-names-list::after {
+  content: "";
+  width: 10px;
+  height: 279px;
+  background-image: url("/img/panel.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: absolute;
+  top: 25px;
+  left: 230px;
+}
+
+.services-description-item {
+  /* outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px; */
+  /* position: relative; */
+}
+
+/* .delivery {
+  position: relative;
+} */
+
+/* .delivery::after {
+  content: "";
+  width: 468px;
+  height: 261px;
+  background-image: url("/img/car.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: absolute;
+  top: 25px;
+  left: 150px;
+} */
+
 .services-message,
 .details-message {
   font-family: "PT Sans",Arial, sans-serif;
@@ -986,8 +1038,18 @@ text-align: center;
   font-size: 18px;
   line-height: 24px;
   color: var(--black);
+  position: relative;
 }
 
+.information-about-item::before {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: var(--basic-red);
+  position: absolute;
+  top: 11px;
+  left: -32px;
+}
 .footer-contacts {
   color: var(--white-cream);
 }
@@ -1180,6 +1242,24 @@ background-color: var(--success);
   background-position: center;
 }
 
+.information-about-button {
+  width: 220px;
+  height: 38px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.information-contacts-button {
+  width: 300px;
+  height: 38px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Catalog-page */
 
 .breadcrumbs li,
@@ -1301,7 +1381,7 @@ text-transform: uppercase;
   background-color: var(--pink);
   margin-bottom: 9px;
   padding-top: 39px;
-   padding-right: 20px;
+  padding-right: 20px;
   padding-left: 20px;
 }
 
@@ -1353,18 +1433,205 @@ text-transform: uppercase;
   display: flex;
   justify-content: space-between;
 }
-/* Modal pages */
 
-/* Modal-cart */
+/* Modal windows */
 
-.modal-cart p {
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  color: var(--basic-black);
+}
+
+/* Write us modal window */
+
+.modal-write-us {
+  display:none;
+  top: 120px;
+  bottom: auto;
+  width: 620px;
+  height: 420px;
+  background-color:var(--white);
+  filter: drop-shadow(0px 4px 20px var(--black-opacity));
+}
+.write-us-form::before {
+  content: "";
+  width: 620px;
+  height: 7px;
+  background-color: var(--basic-red);
+  position: absolute;
+  top: -7px;
+  left: 0px;
+}
+
+.login-name {
+  width: 220px;
+  height: 38px;
+  border: 2px solid var(--basic-greylight);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.login-mail {
+  width: 220px;
+  height: 38px;
+  border: 2px solid var(--basic-greylight);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.login-text {
+  width: 460px;
+  height: 114px;
+  border: 2px solid var(--basic-greylight);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.modal-wrapper {
+  height: 112px;
+  background-color: var(--modal-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:19px;
+}
+
+.button-send {
+  width: 460px;
+  height: 38px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  display: block;
+  margin-bottom: 11px;
+  margin-top: 21px;
+}
+
+ .label-text {
+  display: flex;
+  flex-direction: column;
+  margin-bottom:11px;
+  margin-top:-6px;
+}
+
+.inline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 460px;
+  height: 113px;
+}
+
+.write-us-form input::placeholder {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--light-grey);
+  padding-left:10px;
+}
+
+.login-text::placeholder {
+ transform: translateY(-40px);
+}
+
+.write-us-form {
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  top: 14px;
+  right: 11px;
+  background-color: transparent;
+  background-image: url(/img/icon-close.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  border: 0;
+  cursor: pointer;
+}
+
+
+/* Cart modal window */
+
+.modal-cart {
+  /* display:none; */
+  top: 120px;
+  bottom: auto;
+  width: 620px;
+  height: 275px;
+  background-color:var(--white);
+  filter: drop-shadow(0px 4px 20px var(--black-opacity));
+}
+.modal-cart-message {
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
+  position: relative;
+  /* margin: auto auto; */
+  padding-top: 45px;
+  padding-bottom: 41px;
+  text-align: center;
+
+}
+.modal-cart-message::before {
+  content: "";
+  width: 66px;
+  height: 66px;
+  background-image: url(/img/icon-mark.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 25px;
+  left: 81px;
 }
 
+.button-cart,
+.button-next {
+  width: 192px;
+  height: 38px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .button-next {
   color: var(--black);
   background-color: var(--white);
+}
+
+.modal-cart-container {
+  height: 112px;
+  background-color: var(--modal-background);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.modal-cart::before {
+  content: "";
+  width: 620px;
+  height: 7px;
+  background-color: var(--basic-red);
+  position: absolute;
+  top: -7px;
+  left: 0px;
 }
