@@ -1572,7 +1572,7 @@ text-transform: uppercase;
 /* Cart modal window */
 
 .modal-cart {
-  /* display:none; */
+  display:none;
   top: 120px;
   bottom: auto;
   width: 620px;
@@ -1635,3 +1635,24 @@ text-transform: uppercase;
   top: -7px;
   left: 0px;
 }
+.modal-map::before {
+  content: "";
+  width: 943px;
+  height: 7px;
+  background-color: var(--basic-red);
+  position: absolute;
+  top: -7px;
+  left: 0px;
+}
+
+.modal-map {
+  /* display: none; */
+  top: 120px;
+  bottom: auto;
+  width: 943px;
+  height: 449px;
+  background-color: var(--white);
+  filter: drop-shadow(0px 4px 20px var(--black-opacity);
+}
+
+
