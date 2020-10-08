@@ -14,7 +14,7 @@
   --white-opacity: rgba(255, 255, 255, 0.5);
   --black:#000000;
   --black-opacity:  rgba(0, 0, 0, 0.15);
-  --black-opasity2:  rgba(0, 0, 0, 0.25);
+  --black-opacity2:  rgba(0, 0, 0, 0.25);
   --black-opacity3: rgba(0, 0, 0, 0.01);
   --special-yellow:#FFBF47;
   --special-yellowbright: #FFC047;
@@ -330,8 +330,6 @@ img {
 .pagination-list {
   display: flex;
   flex-wrap: wrap;
-  /* width: 284px; */
-  /* height: 38px; */
 }
 
 .pagination-item a {
@@ -360,7 +358,7 @@ img {
   grid-template-rows: 123px 123px 123px;
   grid-gap: 20px;
   /* min-height: 100vh; */
-  margin-bottom: 180px;
+  margin-bottom: 59px;
 }
 .material {
   grid-area: material;
@@ -661,7 +659,8 @@ img {
   position: absolute;
   left: 23px;
 }
-.material .products-button {
+
+.products-button {
   position: absolute;
   width: 135px;
   height: 38px;
@@ -671,6 +670,11 @@ img {
   justify-content: center;
   top: 64px;
   left: 23px;
+  color: var(--white);
+  /* background:var(--white);
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  Прозрачность????текста не видно... */
 }
 
 .material img {
@@ -681,36 +685,12 @@ img {
   left: 213px;
 }
 
-.instrument .products-button {
-  position: absolute;
-  width: 135px;
-  height: 38px;
-  align-self: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 64px;
-  left: 23px;
-}
-
 .instrument img {
   position: absolute;
   width: 75px;
   height: 61px;
   top: 34px;
   left: 194px;
-}
-
-.technics .products-button {
-  position: absolute;
-  width: 135px;
-  height: 38px;
-  align-self: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 64px;
-  left: 23px;
 }
 
 .technics img {
@@ -721,36 +701,12 @@ img {
   left: 191px;
 }
 
-.sale .products-button {
-  position: absolute;
-  width: 135px;
-  height: 38px;
-  align-self: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 64px;
-  left: 23px;
-}
-
 .sale img {
   position: absolute;
   width: 59px;
   height: 72px;
   top: 26px;
   left: 196px;
-}
-
-.shipping .products-button {
-  position: absolute;
-  width: 135px;
-  height: 38px;
-  align-self: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 64px;
-  left: 23px;
 }
 
 .shipping img {
@@ -777,13 +733,54 @@ img {
   background-color: var(--special-yellowbright);
 }
 
+
+/* ----------------------Slider---------------------- */
+
 .products-item a {
-  background: var(--white);
-  mix-blend-mode: normal;
-  opacity: 0.3;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+}
+.slide-perforator {
+  background-color: var(--basic-grey);
+  background-image: url(/img/perforator.jpg);
+}
+.slide-drill {
+  background-color: var(--basic-grey);
+  background-image: url(/img/drel.jpg);
+}
+.slide {
+  display: none;
+}
+.slide-current {
+  display: block;
+}
+.slider {
+  width: 620px;
+  height: 266px;
+}
+
+.slider-button-action {
+  width: 192px;
+  height: 38px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:39px;
+  margin-left: 24px;
+}
+
+.slider-button-left {
+  margin-top: 34px;
+  margin-left: 24px;
+  margin-right: 510px;
+}
+
+.slider-button-left,
+.slider-button-right {
+  background-color: transparent;
+  border: none;
 }
 
 .slider-item h3 {
@@ -792,12 +789,19 @@ img {
   line-height: 36px;
   color: var(--white);
   text-transform: uppercase;
-  background: var(--black-opasity2);
+  padding-top: 23px;
+  padding-left: 24px;
 }
 
 .slider-item p {
   color: var(--white);
-  background: var(--black-opasity2);
+  padding-top: 5px;
+  padding-left: 24px;
+}
+.staider {
+  display:block;
+  margin-bottom: 36px;
+  margin-left: 295px;
 }
 
 .popular-products h2,
@@ -1646,7 +1650,7 @@ text-transform: uppercase;
 }
 
 .modal-map {
-  /* display: none; */
+  display: none;
   top: 120px;
   bottom: auto;
   width: 943px;
