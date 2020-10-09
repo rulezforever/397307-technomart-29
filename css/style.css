@@ -12,6 +12,7 @@
   --basic-background: #F1F5F7;
   --white:#ffffff;
   --white-opacity: rgba(255, 255, 255, 0.5);
+  --white-opacity2:  rgba(255, 255, 255, 0.3);
   --black:#000000;
   --black-opacity:  rgba(0, 0, 0, 0.15);
   --black-opacity2:  rgba(0, 0, 0, 0.25);
@@ -671,10 +672,7 @@ img {
   top: 64px;
   left: 23px;
   color: var(--white);
-  /* background:var(--white);
-  mix-blend-mode: normal;
-  opacity: 0.3;
-  Прозрачность????текста не видно... */
+  background-color: var(--white-opacity2);
 }
 
 .material img {
@@ -956,8 +954,8 @@ text-align: center;
 }
 
 .services-description-item {
-  /* outline: 5px solid rgba(0, 255, 0, 0.7);
-  outline-offset: -5px; */
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
   /* position: relative; */
 }
 
