@@ -1334,6 +1334,10 @@ padding-bottom: 0;
 .footer-navigation-button:active {
   mix-blend-mode: normal;
   opacity: 0.5;
+
+}
+.footer-navigation-button:active {
+  text-decoration-line: none;
 }
 
 .services-button:focus {
