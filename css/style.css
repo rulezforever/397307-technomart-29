@@ -421,8 +421,8 @@ img {
   column-gap: 80px;
   margin: 0;
   padding: 0;
-  /* margin-bottom: 70px; */
 }
+
 .information {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -439,8 +439,8 @@ img {
 .footer-navigation-top {
   color: var(--white);
   background-color: var(--grey-dark);
-
 }
+
 .main-navigation {
   box-shadow: inset 0px -5px 0px #293449;
 }
@@ -450,8 +450,6 @@ img {
   color: var(--white);
   display: block;
   padding: 18px 0;
-  /* margin-left: 25px;
-  margin-right:25px; */
 }
 
 .footer-navigation-bottom a,
@@ -468,11 +466,8 @@ img {
   background-color: var(--grey-deepdark);
   height: 42px;
   display: flex;
-  /* outline: 5px solid rgba(0, 255, 0, 0.7);
-  outline-offset: -5px; */
   margin: 0;
   padding: 0;
-
 }
 
 .top-panel a {
@@ -507,8 +502,6 @@ img {
   margin: 0;
   padding: 0;
   padding-left: 70px;
-   /* outline: 5px solid rgba(0, 255, 0, 0.7);
-  outline-offset: -5px; */
 }
 
 .phone::before {
@@ -898,6 +891,11 @@ img {
   height: 318px;
   position: relative;
 }
+
+/* .popular-products-item:hover {
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+} */
+
 .icon-new {
   position: absolute;
   top: 0;
