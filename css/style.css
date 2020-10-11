@@ -41,6 +41,8 @@
   --range-toggle:#00CA74;
   --modal-grey: #F4F4F4;
   --modal-background: #F1F1F1;
+  --grey-opacity: rgba(197,197,197,0.3);
+  --grey-opacity2: rgba(169,169,169,0.3);
 }
 
 /* Global */
@@ -174,10 +176,12 @@ img {
 }
 .site-navigation {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  gap: 10px;
   width: 940px;
   margin: 0 auto;
-  padding:0;
+  padding-left:32px;
+  padding-right: 30px;
 }
 
 .footer-panel-top {
@@ -452,6 +456,9 @@ img {
   padding: 18px 0;
 }
 
+.site-navigation a {
+  padding: 18px 20px;
+}
 .footer-navigation-bottom a,
 .create a,
 .mailto {
@@ -538,18 +545,27 @@ img {
 }
 .search-form {
   position: relative;
-  /* background-color: var(--grey-deepdark); */
   margin-left: 12px;
 }
 .search-form input[type=search] {
   color: var(--white);
   background: var(--grey-deepdark);
   border:none;
+  border-style: none;
+  outline: none;
   /* -webkit-appearance: none; */
+}
+
+.search-form:focus-within input[type=search]{
+  background: var(--white);
+  color: var(--black);
 }
 
 .search-form input::placeholder {
   color: var(--white);
+}
+.search-form:focus-within:before {
+  background-image: url("../img/red-icon-search.svg");
 }
 
 .search-form::before {
@@ -1280,12 +1296,12 @@ padding-bottom: 0;
 }
 
 .products-button:hover {
-  background-color: var(--basic-greylight);
+  background-color: var(--grey-opacity);
 }
 
 .products-button:focus,
-.products-button:action {
-  background-color: var(--light-grey);
+.products-button:active {
+  background-color: var(--grey-opacity2);
 }
 
 .products-buy-button {
@@ -1296,7 +1312,7 @@ padding-bottom: 0;
   background-color: var(--success);
 }
 
-.products-buy-button:action,
+.products-buy-button:active,
 .products-buy-button:focus {
   background-color: var(--green-action);
 }
@@ -1317,7 +1333,7 @@ padding-bottom: 0;
 }
 
 .products-fav-button:focus,
-.products-fav-button:action {
+.products-fav-button:active {
   border: 3px solid var(--grey-dark);
   box-sizing: border-box;
   border-radius: 2px;
@@ -1343,6 +1359,9 @@ padding-bottom: 0;
 .services-button:focus {
   background-color: var(--white);
   color: var(--grey-dark);
+  box-shadow: 0px 1px 0px var(--white), inset 0px 1px 0px var(--white);
+  border-style: none;
+  outline: none;
 }
 
 .fabric-button:hover {
@@ -1384,22 +1403,28 @@ background-color: var(--success);
   position: absolute;
   border-radius: 50%;
 }
-
-.vk-button::before {
-  background-image: url("../img/Вконтакте.svg");
-  position: absolute;
-  background-position: center;
-
+.social-button:hover::before {
+  background-color: var(--basic-red);
 }
 
+.vk-button::before {
+  background-image: url("../img/icon-vk.svg");
+  position: absolute;
+  background-position: center;
+}
+/* .vk-button::before:hover,
+.vk-button::before:focus {
+  background-color: var(--basic-red);
+} */
+
 .fb-button::before {
-  background-image: url("../img/Фейсбук.svg");
+  background-image: url("../img/icon-fb.svg");
   position: absolute;
   background-position: center;
 }
 
 .instagram-button::before {
-  background-image: url("../img/Инстаграм.svg");
+  background-image: url("../img/icon-insta.svg");
   position: absolute;
   background-position: center;
 }
