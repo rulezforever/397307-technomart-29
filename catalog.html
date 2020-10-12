@@ -67,6 +67,10 @@
       <div class="catalog-container">
         <aside class="filters">
           <h2 class="visually-hidden">Фильтр товаров</h2>
+          <div class="filter-panel">
+            <p>Фильтр:</p>
+          </div>
+
           <form class="filter" method="get" action="https://echo.htmlacademy.ru">
             <fieldset class="filter-item">
               <legend>Цена:</legend>
@@ -136,17 +140,31 @@
             <button type="submit" class="filter-button">Показать</button>
           </form>
         </aside>
-        <!-- <section>
-          <h2>Сортировка</h2>
-          Здесь будет форма сортировки
-        </section>-->
         <section class="perforators">
           <h2 class="visually-hidden">Перфораторы</h2>
+
+           <ul class="sort">
+             <li>Сортировка:</li>
+             <li class="sort-price"><button class="sort-button sort-button-current" type="button">По цене</button></li>
+             <li class="sort-type"><button class="sort-button" type="button">По типу</button></li>
+             <li class="sort-func"><button class="sort-button" type="button">По функционалу</button></li>
+             <li class="sort-up sort-active">
+              <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.66241 0L11.1624 10L0.162415 10" fill="#C5C5C5"/>
+                </svg>
+             </li>
+             <li class="sort-down">
+              <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.66241 0L11.1624 10L0.162415 10" fill="#C5C5C5"/>
+                </svg>
+             </li>
+           </ul>
+
           <ul class="popular-catalog-list">
             <li>
               <article class="popular-products-item">
-                <img src="img/6000.jpg" width="144" height="128" alt="Перфоратор BOSH BFG 6000">
-                <h3>Перфоратор BOSH BFG 6000</h3>
+                <img src="img/6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                <h3>Перфоратор BOSCH BFG 6000</h3>
                 <p><s>30500 Р.</s></p>
                 <a class="price" href="">25500 Р.</a>
                 <a class="button products-buy-button" href="">Купить</a>
@@ -155,8 +173,8 @@
             </li>
             <li>
               <article class="popular-products-item">
-                <img src="img/6000.jpg" width="144" height="128" alt="Перфоратор BOSH BFG 6000">
-                <h3>Перфоратор BOSH BFG 6000</h3>
+                <img src="img/6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                <h3>Перфоратор BOSCH BFG 6000</h3>
                 <p><s>30500 Р.</s></p>
                 <a class="price" href="">25500 Р.</a>
                 <a class="button products-buy-button" href="">Купить</a>
@@ -165,8 +183,8 @@
             </li>
             <li>
               <article class="popular-products-item">
-                <img src="img/6000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 6000">
-                <h3>Перфоратор BOSH BFG 6000</h3>
+                <img src="img/6000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 6000">
+                <h3>Перфоратор BOSCH BFG 6000</h3>
                 <p><s>30500 Р.</s></p>
                 <a class="price" href="">25500 Р.</a>
                 <p>new</p>
@@ -176,8 +194,8 @@
             </li>
             <li>
               <article class="popular-products-item">
-                <img src="img/3000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 3000">
-                <h3>Перфоратор BOSH BFG 3000</h3>
+                <img src="img/3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+                <h3>Перфоратор BOSCH BFG 3000</h3>
                 <p><s>22500 Р.</s></p>
                 <a class="price" href="">15500 Р.</a>
                 <a class="button products-buy-button" href="">Купить</a>
@@ -186,8 +204,8 @@
             </li>
             <li>
               <article class="popular-products-item">
-                <img src="img/6000.jpg" width="144" height="128" alt="Перфоратор BOSH BFG 6000">
-                <h3>Перфоратор BOSH BFG 6000</h3>
+                <img src="img/6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                <h3>Перфоратор BOSCH BFG 6000</h3>
                 <p><s>30500 Р.</s></p>
                 <a class="price" href="">25500 Р.</a>
                 <p>new</p>
@@ -197,8 +215,8 @@
             </li>
             <li>
               <article class="popular-products-item">
-                <img src="img/2000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 2000">
-                <h3>Перфоратор BOSH BFG 2000</h3>
+                <img src="img/2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+                <h3>Перфоратор BOSCH BFG 2000</h3>
                 <p><s>22500</s></p>
                 <a class="price" href="">12500 Р.</a>
                 <p>new</p>
@@ -208,8 +226,8 @@
             </li>
             <li>
               <article class="popular-products-item">
-                <img src="img/3000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 3000">
-                <h3>Перфоратор BOSH BFG 3000</h3>
+                <img src="img/3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+                <h3>Перфоратор BOSCH BFG 3000</h3>
                 <p><s>22500 Р.</s></p>
                 <a class="price" href="">15500 Р.</a>
                 <p>new</p>
@@ -219,8 +237,8 @@
             </li>
             <li>
               <article class="popular-products-item">
-                <img src="img/6000.jpg" width="144" height="128" alt="Перфоратор BOSH BFG 6000">
-                <h3>Перфоратор BOSH BFG 6000</h3>
+                <img src="img/6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                <h3>Перфоратор BOSCH BFG 6000</h3>
                 <p><s>30500 Р.</s></p>
                 <a class="price" href="">25500 Р.</a>
                 <a class="button products-buy-button" href="">Купить</a>
@@ -229,8 +247,8 @@
             </li>
             <li>
               <article class="popular-products-item">
-                <img src="img/2000.jpg" width="127" height="112" alt="Перфоратор BOSH BFG 2000">
-                <h3>Перфоратор BOSH BFG 2000</h3>
+                <img src="img/2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+                <h3>Перфоратор BOSCH BFG 2000</h3>
                 <p><s>22500</s></p>
                 <a class="price" href="">12500 Р.</a>
                 <p>new</p>
