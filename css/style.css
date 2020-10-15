@@ -46,6 +46,8 @@
   --checkbox-grey: #B5B5B5;
   --shadow: #405069;
   --catalog-background: #F2F6F8;
+  --green-shadow: #367315;
+  --
 }
 
 /* Global */
@@ -155,6 +157,14 @@ img {
   position: absolute;
   top: 16px;
   left: 17px;
+}
+
+.enter-button:hover:before {
+  background-image: url("../img/icon-login-hover.svg");
+}
+
+.enter-button:active:before {
+  background-image: url("../img/icon-login.svg");
 }
 
 .registration-button {
@@ -376,6 +386,7 @@ img {
   align-items: center;
   margin: 0;
   margin-bottom: 14px;
+  border-radius: 2px;
 }
 
 .filter-panel p {
@@ -398,6 +409,7 @@ img {
   margin:0;
   padding:0;
   margin-bottom: 28px;
+  border-radius: 2px;
 }
 
 .sort-button {
@@ -718,7 +730,7 @@ img {
 }
 
 .main-navigation {
-  box-shadow: inset 0px -5px 0px #293449;
+  box-shadow: inset 0px -5px 0px var(--grey-deepdark);
 }
 
 .site-navigation a,
@@ -900,7 +912,20 @@ img {
 .cart {
   position: relative;
   margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:red;
 }
+
+/* .cart-fool{
+  width: 136px;
+  height: 42px;
+  background-color: var(--basic-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 
 .cart::before {
   content: "";
@@ -1619,7 +1644,36 @@ padding-bottom: 0;
 }
 
 .products-buy-button {
+  display: flex;
+  justify-content:center;
+  align-items: center;
   background-color: var(--basic-green);
+  width: 135px;
+  height: 38px;
+  box-shadow: inset 0px -3px 0px var(--green-shadow);
+  border-radius: 2px;
+  position: absolute;
+  top: 37px;
+  left: 40px;
+  margin-bottom: 0;
+}
+
+.products-buy-button::before {
+  content:"";
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+
+.buttons-wrapper {
+  height: 165px;
 }
 
 .products-buy-button:hover {
@@ -1632,11 +1686,19 @@ padding-bottom: 0;
 }
 
 .products-fav-button {
-  color:var(--grey-dark);
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  width: 135px;
+  height: 38px;
+  color: var(--grey-dark);
   border: 3px solid var(--basic-green);
   box-sizing: border-box;
   border-radius: 2px;
   background-color: var(--white);
+  position: absolute;
+  top: 87px;
+  left: 40px;
 }
 
 .products-fav-button:hover {
@@ -2016,6 +2078,7 @@ background-color: var(--success);
   background: var(--pink);
   font-family: inherit;
   font-size: inherit;
+  border-radius: 2px;
 }
 
 .price-controls {
