@@ -47,7 +47,6 @@
   --shadow: #405069;
   --catalog-background: #F2F6F8;
   --green-shadow: #367315;
-  --
 }
 
 /* Global */
@@ -2359,7 +2358,7 @@ background-color: var(--success);
   width: 943px;
   height: 449px;
   background-color: var(--white);
-  filter: drop-shadow(0px 4px 20px var(--black-opacity);
+  filter: drop-shadow(0px 4px 20px var(--black-opacity));
 }
 
 /* Animations */
