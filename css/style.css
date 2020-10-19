@@ -103,6 +103,7 @@ img {
 }
 
 .main-header {
+  min-width: 960px;
   background-color: var(--basic-background);
   /* outline: 5px solid rgba(0, 255, 0, 0.7);
   outline-offset: -5px; */
@@ -494,7 +495,6 @@ img {
   width: 220px;
   margin-bottom: 18px;
   margin-right: 0px;
-
 }
 
 .popular-products-item:nth-child(3n) {
@@ -776,7 +776,7 @@ img {
 }
 
 .phone {
-  font-family: Cuprum;
+  font-family: "Cuprum", Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
@@ -920,7 +920,8 @@ img {
   padding-left: 5px;
 }
 
-.cart-fool{
+.cart-fool,
+.favorite-add {
   background-color: var(--basic-red);
 }
 
@@ -1214,7 +1215,7 @@ img {
   padding-right: 18px;
   padding-top: 6px;
   padding-bottom: 21px;
-  height: 318px;
+  min-height: 318px;
   position: relative;
 }
 
@@ -1229,7 +1230,6 @@ img {
 .popular-products-item:hover .buttons-wrapper {
   display: block;
 }
-
 
 .icon-new {
   position: absolute;
@@ -1261,22 +1261,22 @@ img {
 }
 
 .popular-products-item h3 {
-font-family: "PT Sans",Arial, sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 20px;
-color: var(--black);
-text-align: center;
-margin-top: 9px;
-padding-left: 5px;
-padding-right: 5px;
-margin-bottom: 0;
-padding-bottom: 0;
+  font-family: "PT Sans",Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--black);
+  text-align: center;
+  margin-top: 9px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .old-price {
-  font-family: PT Sans;
+  font-family: "PT Sans",Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 17px;
@@ -1291,7 +1291,7 @@ padding-bottom: 0;
 }
 
 .popular-products-item .price {
-  font-family: PT Sans;
+  font-family: "PT Sans",Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 17px;
@@ -1322,6 +1322,14 @@ padding-bottom: 0;
 .services {
   height: 522px;
   background-color: var(--basic-background);
+}
+
+.services-description-item {
+  display: none;
+}
+
+.services-description-current {
+  display: block;
 }
 
 .services h2,
@@ -1476,6 +1484,7 @@ padding-bottom: 0;
   position: absolute;
   bottom: 63px;
   right: 0;
+  background-color: var(--basic-background);
 }
 
 .information-contacts h3 {
@@ -1553,6 +1562,10 @@ padding-bottom: 0;
    margin: 0;
    margin-top: -5px;
    padding-left: 2px;
+}
+
+.footer-contacts a {
+  color: var(--white-cream);
 }
 
 .footer-copy,
@@ -1862,7 +1875,7 @@ background-color: var(--success);
 }
 
 .filter legend {
-  font-family: PT Sans;
+  font-family: "PT Sans",Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 17px;
@@ -1871,7 +1884,7 @@ background-color: var(--success);
 }
 
 .filter-option label {
-  font-family: PT Sans;
+  font-family: "PT Sans",Arial, sans-serif;;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -1897,7 +1910,6 @@ background-color: var(--success);
 .filter-input-checkbox:disabled + label::before {
   background-image: url("../img/checkbox-off-hover.svg");
   opacity: 0.3;
-
 }
 
 .filter-input-checkbox:checked:disabled + label::after {
@@ -1954,8 +1966,26 @@ background-color: var(--success);
   background-position: 0 0;
 }
 
+.filter-input-radio:hover + label::before {
+  background-image: url("../img/radio-off-hover.svg");
+}
+
+.filter-input-radio:checked:hover + label::after {
+  background-image: url("../img/radio-on-hover.svg");
+}
+
+.filter-input-radio:disabled + label::before {
+  background-image: url("../img/radio-off-hover.svg");
+  opacity: 0.3;
+}
+
+.filter-input-radio:checked:disabled + label::after {
+  background-image: url("../img/radio-on-hover.svg");
+  opacity: 0.3;
+}
+
 .filter-button {
-  font-family: PT Sans;
+  font-family: "PT Sans",Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -2108,6 +2138,11 @@ background-color: var(--success);
 
 .modal-show {
   display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 /* Write us modal window */
@@ -2201,7 +2236,7 @@ background-color: var(--success);
 }
 
 .write-us-form input::placeholder {
-  font-family: PT Sans;
+  font-family: "PT Sans",Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -2327,3 +2362,44 @@ background-color: var(--success);
   filter: drop-shadow(0px 4px 20px var(--black-opacity);
 }
 
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
