@@ -47,13 +47,13 @@ writeUsClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   writeUsPopup.classList.remove("modal-show");
   writeUsPopup.classList.remove("modal-error");
-  writeUsPopup.offsetWidth = writeUsPopup.offsetWidth;
-  writeUsPopup.classList.add("modal-error");
 });
 
 writeUsForm.addEventListener("submit", function (evt) {
   if (!writeUsEmail.value || !writeUsName.value) {
     evt.preventDefault();
+    writeUsPopup.classList.remove("modal-error");
+    writeUsPopup.offsetWidth = writeUsPopup.offsetWidth;
     writeUsPopup.classList.add("modal-error");
   } else {
     if (isStorageSupport) {
