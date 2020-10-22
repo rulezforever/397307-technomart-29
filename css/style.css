@@ -17,6 +17,7 @@
   --black-opacity:  rgba(0, 0, 0, 0.15);
   --black-opacity2:  rgba(0, 0, 0, 0.25);
   --black-opacity3: rgba(0, 0, 0, 0.01);
+  --black-opacity4: rgba(0, 0, 0, 0.1);
   --special-yellow:#FFBF47;
   --special-yellowbright: #FFC047;
   --special-blue:#3BBCE3;
@@ -95,8 +96,12 @@ img {
 
 .main-header-logo {
   width: 220px;
-  height: 47px;
+  height: 42px;
   margin-right: -30px;
+}
+
+.main-header-logo img{
+  object-fit: none;
 }
 
 .main-header {
@@ -496,7 +501,7 @@ img {
 }
 
 .popular-products-item:nth-child(3n) {
-  margin-right: 0;
+  margin-right: 20px;
 }
 
 .popular-products-item .icon-new {
@@ -638,7 +643,6 @@ img {
   grid-template-columns: 300px 300px 300px;
   grid-template-rows: 123px 123px 123px;
   grid-gap: 20px;
-  /* min-height: 100vh; */
   margin-bottom: 59px;
 }
 
@@ -790,15 +794,15 @@ img {
 }
 
 .phone::before {
-    content: "";
-    width: 18px;
-    height: 19px;
-    background-image: url("../img/phone-icon.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    position: absolute;
-    top: 10px;
-    left: 35px;
+  content: "";
+  width: 18px;
+  height: 19px;
+  background-image: url("../img/phone-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: absolute;
+  top: 10px;
+  left: 35px;
 }
 
 .bottom-panel-title {
@@ -1645,6 +1649,8 @@ img {
   top: 37px;
   left: 40px;
   margin-bottom: 0;
+  box-sizing: border-box;
+  padding-left: 15px;
 }
 
 .products-buy-button::before {
@@ -1656,7 +1662,7 @@ img {
   background-position: 0 0;
   position: absolute;
   top: 10px;
-  left: 25px;
+  left: 30px;
   mix-blend-mode: normal;
   opacity: 0.3;
 }
@@ -1916,7 +1922,7 @@ background-color: var(--success);
   content: "";
   position: absolute;
   left: -22px;
-  top: -5px;
+  top: 0px;
   width: 25px;
   height: 25px;
   background-image: url(../img/radio-off.svg);
@@ -1927,7 +1933,7 @@ background-color: var(--success);
 .filter-input-radio:checked + label::after {
   content: "";
   position: absolute;
-  top: -5px;
+  top: 0px;
   left: -22px;
   width: 25px;
   height: 25px;
@@ -1998,12 +2004,19 @@ background-color: var(--success);
   margin-top: 11px;
 }
 
-.line {
+.separate-line-one {
   width: 220px;
   height: 1px;
-  background: rgba(0, 0, 0, 0.1);
+  background: var(--black-opacity4);
   margin-top: 24px;
   margin-bottom: 16px;
+}
+
+.separate-line-two{
+  width: 220px;
+  height: 1px;
+  background: var(--black-opacity4);
+  margin-top: 30px;
 }
 
 .checkbox-list {
@@ -2029,7 +2042,7 @@ background-color: var(--success);
 }
 
 .filter-power legend {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .range-controls {
@@ -2077,15 +2090,17 @@ background-color: var(--success);
 }
 
 .price-controls input {
-  width: 90px;
+  width: 95px;
   height: 38px;
   text-align: center;
   color: var(--black);
+  box-sizing: border-box;
   border: none;
   background: var(--pink);
   font-family: inherit;
   font-size: inherit;
   border-radius: 2px;
+  outline: none;
 }
 
 .price-controls {

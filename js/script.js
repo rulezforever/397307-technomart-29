@@ -60,7 +60,6 @@ writeUsForm.addEventListener("submit", function (evt) {
     localStorage.setItem("Name", writeUsName.value);
     localStorage.setItem("Email", writeUsEmail.value);
     }
-
   }
 });
 
@@ -98,3 +97,67 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
+
+// ---Slider services
+
+const deliveryButton = document.querySelector(".button-delivery");
+const guaranteeButton = document.querySelector(".button-guarantee");
+const creditButton = document.querySelector(".button-credit");
+const item1 = document.querySelector(".item-1");
+const item2 = document.querySelector(".item-2");
+const item3 = document.querySelector(".item-3");
+
+deliveryButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  deliveryButton.classList.add("button-active");
+  guaranteeButton.classList.remove("button-active");
+  creditButton.classList.remove("button-active");
+  item1.classList.add("services-description-current");
+  item2.classList.remove("services-description-current");
+  item3.classList.remove("services-description-current");
+});
+
+guaranteeButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  guaranteeButton.classList.add("button-active");
+  deliveryButton.classList.remove("button-active");
+  creditButton.classList.remove("button-active");
+  item2.classList.add("services-description-current");
+  item1.classList.remove("services-description-current");
+  item3.classList.remove("services-description-current");
+});
+
+creditButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  creditButton.classList.add("button-active");
+  guaranteeButton.classList.remove("button-active");
+  deliveryButton.classList.remove("button-active");
+  item3.classList.add("services-description-current");
+  item1.classList.remove("services-description-current");
+  item2.classList.remove("services-description-current");
+});
+
+
+
+
+// const sliderButtonLeft = document.querySelector(".slider-button-left");
+// const slideOne = document.querySelector(".slide-one");
+// const slideTwo = document.querySelector(".slide-two");
+// const sliderPicture = document.querySelector(".slider");
+
+// sliderButtonLeft.addEventListener("click", function (evt) {
+//   evt.preventDefault();
+
+//   if (sliderPicture.classList.contains("slide-perforator")) {
+//     sliderPicture.classList.remove("slide-perforator");
+//     sliderPicture.classList.add("slide-drill");
+//     slideOne.classList.toggle("slide-current");
+//     slideTwo.classList.add("slide-current");
+//   }
+//   // } else {
+//   //   sliderPicture.classList.remove("slide-drill");
+//   //   sliderPicture.classList.add("slide-perforator");
+//   // }
+
+//   // slide.classList.toggle("slide-current");
+// });
