@@ -39,7 +39,7 @@ writeUsLink.addEventListener("click", function (evt) {
     writeUsEmail.value = storageName;
     writeUsText.focus();
   } else {
-    writeUsEmail.focus();
+    writeUsName.focus();
   }
 });
 
