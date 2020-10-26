@@ -82,29 +82,29 @@
             <img src="img/shipping-icon.svg" width="78" height="63" alt="Иконка Доставка">
           </li>
           <li class="products-item slider-collection">
-            <div class="slider slide-perforator">
-              <ul class="slider-list">
-                <li class="slider-item slide slide-current">
+            <div class="slider">
+              <input type="radio" name="v" class="slider-controls slider-control-1" id="btn-1" value="" checked>
+              <input type="radio" name="v" class="slider-controls slider-control-2" id="btn-2" value="">
+              <div class="slider-controls">
+                <label for="btn-1"></label>
+                <label for="btn-2"></label>
+              </div>
+              <div class="slider-arrows">
+                <label for="btn-1"></label>
+                <label for="btn-2"></label>
+              </div>
+              <div class="slides">
+                <div class="slider-slide slide-one">
                   <h3>Перфораторы</h3>
                   <p>Настоящие мужские игрушки</p>
-                  <button class="slider-button-left" type="button"><img src="img/icon-left.svg" width="22" height="40"
-                      alt="Влево"></button>
-                  <button class="slider-button-right" type="button"><img src="img/icon-right.svg" width="22" height="40"
-                      alt="Вправо"></button>
                   <a class="button slider-button-action" href="catalog.html">Открыть каталог</a>
-                  <img src="img/staider.svg" class="staider" width="30" height="10" alt="Стайдер">
-                </li>
-                <li class="slider-item slide">
+                </div>
+                <div class="slider-slide slide-two">
                   <h3>Дрели</h3>
                   <p>Соседям на радость!</p>
-                  <button class="slider-button-left" type="button"><img src="img/icon-left.svg" width="22" height="40"
-                      alt="Влево"></button>
-                  <button class="slider-button-right" type="button"><img src="img/icon-right.svg" width="22" height="40"
-                      alt="Вправо"></button>
                   <a class="button slider-button-action" href="catalog.html">Открыть каталог</a>
-                  <img src="img/staider.svg" class="staider" width="30" height="10" alt="Стайдер">
-                </li>
-              </ul>
+                </div>
+              </div>
           </li>
         </ul>
 
@@ -208,8 +208,10 @@
           <ul class="services-names-list">
             <li class="services-names-item"><button class="services-button button-delivery button-active"
                 type="button">Доставка</button></li>
-            <li class="services-names-item"><button class="services-button button-guarantee" type="button">Гарантия</button></li>
-            <li class="services-names-item"><button class="services-button button-credit" type="button">Кредит</button></li>
+            <li class="services-names-item"><button class="services-button button-guarantee"
+                type="button">Гарантия</button></li>
+            <li class="services-names-item"><button class="services-button button-credit" type="button">Кредит</button>
+            </li>
           </ul>
           <ul class="services-description-list">
             <li class="item-1 services-description-item services-description-current">

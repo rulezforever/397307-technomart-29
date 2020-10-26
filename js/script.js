@@ -10,7 +10,7 @@ const writeUsText = writeUsPopup.querySelector(".login-text");
 
 const isStorageSupport = true;
 const storageName = "";
-const storageEmail="";
+const storageEmail = "";
 
 try {
   storage = localStorage.getItem("Name");
@@ -57,8 +57,8 @@ writeUsForm.addEventListener("submit", function (evt) {
     writeUsPopup.classList.add("modal-error");
   } else {
     if (isStorageSupport) {
-    localStorage.setItem("Name", writeUsName.value);
-    localStorage.setItem("Email", writeUsEmail.value);
+      localStorage.setItem("Name", writeUsName.value);
+      localStorage.setItem("Email", writeUsEmail.value);
     }
   }
 });
@@ -136,117 +136,3 @@ creditButton.addEventListener("click", function (evt) {
   item1.classList.remove("services-description-current");
   item2.classList.remove("services-description-current");
 });
-
-// const slider = document.querySelector('.slider');
-// slider.addEventListener('click', (e)=> {
-//   console.log(e.target);
-// })
-
-
-
-
-// const sliderButtonLeft = document.querySelector(".slider-button-left");
-// const slideOne = document.querySelector(".slide-one");
-// const slideTwo = document.querySelector(".slide-two");
-// const sliderPicture = document.querySelector(".slider");
-
-// sliderButtonLeft.addEventListener("click", function (evt) {
-//   evt.preventDefault();
-
-//   if (sliderPicture.classList.contains("slide-perforator")) {
-//     sliderPicture.classList.remove("slide-perforator");
-//     sliderPicture.classList.add("slide-drill");
-//     slideOne.classList.toggle("slide-current");
-//     slideTwo.classList.add("slide-current");
-//   }
-//   // } else {
-//   //   sliderPicture.classList.remove("slide-drill");
-//   //   sliderPicture.classList.add("slide-perforator");
-//   // }
-
-//   // slide.classList.toggle("slide-current");
-// });
-/* <div class="promo-slider">
-          <input type="radio" name="slider-controls" id="btn-1" value="" checked>
-          <input type="radio" name="slider-controls" id="btn-2" value="">
-          <div class="promo-slider-controls">
-            <label for="btn-1"></label>
-            <label for="btn-2"></label>
-          </div>
-          <div class="promo-slider-arrows">
-            <label for="btn-1"></label>
-            <label for="btn-2"></label>
-          </div>
-          <div class="promo-slides">
-            <div class="promo-slide">
-              <div class="promo-slide-title">Перфораторы</div>
-              <div class="promo-slide-text">Настоящие мужские игрушки</div>
-              <a class="slider-btn red-btn" href="#">Открыть каталог</a>
-            </div>
-            <div class="promo-slide">
-              <div class="promo-slide-title">Дрели</div>
-              <div class="promo-slide-text">Соседям на радость!</div>
-              <a class="slider-btn red-btn" href="#">Открыть каталог</a>
-            </div>
-          </div>
-
-
-
-          <div class="slider">
-          <input type="radio" name="v" id="btn-1" class="slider__btn slider__btn--1" clavalue="" checked>
-          <input type="radio" name="v" id="btn-2" class="slider__btn slider__btn--2" value="">
-          <div class="slider__controls">
-            <label for="btn-1"></label>
-            <label for="btn-2"></label>
-          </div>
-          <div class="slider__arrows">
-            <label for="btn-1"></label>
-            <label for="btn-2"></label>
-          </div>
-          <div class="slider__slides">
-            <div class="slider__slide slider__slider--1">1
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, necessitatibus eveniet. Velit, laborum sed. Doloribus, illum mollitia. Voluptatem quam magni reprehenderit dicta harum? Quae ullam sunt exercitationem doloribus dolores quasi iusto! Eos eligendi, quae nemo optio, iure et ipsam aspernatur reprehenderit accusamus voluptatibus veritatis magni cum eum debitis maxime vitae similique eius. Inventore corporis quia veritatis.</div>
-            <div class="slider__slide slider__slider--2">2
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam expedita, nesciunt aliquid reprehenderit aliquam adipisci non sint. Esse aliquam perspiciatis fugiat ex optio natus harum, vitae deleniti quasi sunt a iusto nesciunt consequuntur est, eos, cumque facilis? Quas architecto vero nobis porro distinctio dolor. Assumenda!</div>
-          </div>
-
-
-  .slider {
-  position: relative;
-
-  &__slide {
-    display: none;
-    padding: 10px;
-    background-color: green;
-    text-align: center;
-  }
-
-  input {
-    display: none;
-  }
-
-  &__btn {
-    &--1:checked ~ .slider__slides > .slider__slider--1 {
-      display: block;
-    }
-
-    &--2:checked ~ .slider__slides > .slider__slider--2 {
-      display: block;
-    }
-  }
-
-  &__controls {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-
-    & > label {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      // border-radius: 50%;
-      background-color: yellow;
-      cursor: pointer;
-    }
-  // } */

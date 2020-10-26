@@ -681,9 +681,6 @@ img {
   grid-area: slider;
 }
 
-.slider-list,
-.slider-item h3,
-.slider-item p,
 .services-names-list,
 .services-description-list {
   margin: 0;
@@ -955,8 +952,7 @@ img {
 
 /* Main */
 
-.products-list,
-.slider-list {
+.products-list {
   list-style: none;
 }
 
@@ -1070,59 +1066,20 @@ img {
 
 /* ----------------------Slider---------------------- */
 
-.products-item a {
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-}
-
-.slide-perforator {
-  background-color: var(--basic-grey);
-  background-image: url(../img/perforator.jpg);
-}
-
-.slide-drill {
-  background-color: var(--basic-grey);
-  background-image: url(../img/drel.jpg);
-}
-
-.slide {
-  display: none;
-}
-
-.slide-current {
-  display: block;
-}
-
 .slider {
-  width: 620px;
+  position: relative;
+}
+
+.slider-slide {
+  display: none;
+  padding: 0px;
+  margin: 0;
+  background-color:var(--basic-grey);
   height: 266px;
 }
 
-.slider-button-action {
-  width: 192px;
-  height: 38px;
-  align-self: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top:31px;
-  margin-left: 24px;
-}
-
-.slider-button-left {
-  margin-top: 34px;
-  margin-left: 19px;
-  margin-right: 510px;
-}
-
-.slider-button-left,
-.slider-button-right {
-  background-color: transparent;
-  border: none;
-}
-
-.slider-item h3 {
+.slider-slide h3 {
+  margin: 0;
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
@@ -1132,23 +1089,102 @@ img {
   padding-left: 24px;
 }
 
-.slider-item {
-  position: relative;
-}
-
-.slider-item p {
+.slider-slide p {
   color: var(--white);
-  padding-top: 5px;
+  margin: 0;
+  padding-top: 6px;
   padding-left: 24px;
 }
 
-.staider {
-  display:block;
-  margin-bottom: 16px;
-  margin-left: 295px;
+.slider input {
+  display: none;
+}
+
+.slider-control-1:checked ~ .slides > .slide-one {
+  display: block;
+}
+
+.slider-control-2:checked ~ .slides > .slide-two  {
+  display: block;
+}
+
+.slider-control-2:checked ~ .slider-controls > label:first-child {
+  background-color: var(--white);
+}
+
+.slider-control-1:checked ~ .slider-controls > label:last-child {
+  background-color: var(--white);
+}
+
+.slider-controls {
   position: absolute;
-  top: 220px;
-  left: 0px;
+  bottom: 28px;
+  left: 315px;
+  transform: translateX(-50%);
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: 8px;
+  background-color: var(--basic-red);
+  cursor: pointer;
+  border: 2px solid var(--white);
+}
+
+
+.slide-one {
+  background-color: var(--basic-grey);
+  background-image: url(../img/perforator.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.slide-two {
+  background-color: var(--basic-grey);
+  background-image: url(../img/drel.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.slider-arrows label {
+  position: absolute;
+  top: 122px;
+  width: 22px;
+  height: 40px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.slider-arrows label:nth-child(1) {
+  background-image: url("../img/icon-left.svg");
+  left: 25px;
+}
+
+.slider-arrows label:nth-child(2) {
+  background-image: url("../img/icon-right.svg");
+  right: 22px;
+}
+
+.products-item a {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.slider-button-action {
+  width: 192px;
+  height: 38px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 26px;
+  left: 24px;
 }
 
 .popular-products h2,
