@@ -18,6 +18,7 @@
   --black-opacity2:  rgba(0, 0, 0, 0.25);
   --black-opacity3: rgba(0, 0, 0, 0.01);
   --black-opacity4: rgba(0, 0, 0, 0.1);
+  --black-opacity5:  rgba(0, 0, 0, 0.24);
   --special-yellow:#FFBF47;
   --special-yellowbright: #FFC047;
   --special-blue:#3BBCE3;
@@ -100,8 +101,26 @@ img {
   margin-right: -30px;
 }
 
-.main-header-logo img{
-  object-fit: none;
+.logo {
+  float: left;
+  display: block;
+  text-align: center;
+  width: 220px;
+  height: 47px;
+  background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0 var(--black-opacity5);
+}
+.logo-img {
+  display: block;
+  width: 116px;
+  height: 18px;
+  margin: 0 auto;
+  margin-top: 13px;
+}
+
+.logo:active {
+  background-color: var(--error);
+  box-shadow: inset 0px -5px 0 var(--black-opacity5);
 }
 
 .main-header {
@@ -709,7 +728,6 @@ img {
 .services-columns {
   display: grid;
   grid-template-columns: 240px 619px;
-  grid-template-rows: ;
   column-gap: 80px;
   margin: 0;
   padding: 0;
@@ -836,7 +854,7 @@ img {
 
 .search-form {
   position: relative;
-  margin-left: 75px;
+  margin-left: 70px;
 }
 
 .search-form input[type=search] {
@@ -868,8 +886,8 @@ img {
   background-repeat: no-repeat;
   background-position: 0 0;
   position: absolute;
-  top: 5px;
-  left: -20px;
+  top: 3px;
+  left: -25px;
   mix-blend-mode: normal;
   opacity: 0.3;
 }
@@ -916,13 +934,13 @@ img {
 
 .cart {
   position: relative;
-  margin-left: 10px;
+  margin-left: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 136px;
   height: 42px;
-  padding-left: 5px;
+  /* padding-left: 52px; */
 }
 
 .cart-fool,
@@ -939,7 +957,7 @@ img {
   background-position: 0 0;
   position: absolute;
   top: 12px;
-  left: 10px;
+  left: 7px;
   mix-blend-mode: normal;
   opacity: 0.3;
 }
@@ -1754,10 +1772,7 @@ img {
 
 .products-fav-button:focus,
 .products-fav-button:active {
-  border: 3px solid var(--grey-dark);
-  box-sizing: border-box;
-  border-radius: 2px;
-  background-color: var(--white-opacity);
+  opacity: 0.5;
 }
 
 .footer-navigation-button:hover,
@@ -1923,7 +1938,48 @@ background-color: var(--success);
   text-transform: uppercase;
 }
 
-.filter-input-checkbox:hover + label::before {
+.icon-checkbox,
+.icon-radio {
+  display: inline-block;
+  padding-right: 12px;
+  vertical-align: middle;
+}
+
+.filter-input-checkbox:hover + label path,
+.filter-input-radio:hover + label path {
+  fill: var(--checkbox-grey);
+}
+
+.filter-input-checkbox:disabled + label path,
+.filter-input-radio:disabled + label path {
+  opacity: 0.3;
+}
+
+.filter-input-checkbox:checked + label::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 0px;
+  width: 26px;
+  height: 23px;
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-radio:checked + label::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 0px;
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/radio-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+/* .filter-input-checkbox:hover + label::before {
   background-image: url("../img/checkbox-off-hover.svg");
 }
 
@@ -2006,7 +2062,7 @@ background-color: var(--success);
 .filter-input-radio:checked:disabled + label::after {
   background-image: url("../img/radio-on-hover.svg");
   opacity: 0.3;
-}
+} */
 
 .filter-button {
   font-family: "PT Sans",Arial, sans-serif;
@@ -2031,7 +2087,7 @@ background-color: var(--success);
 
 .filter-item legend{
   margin-bottom: 0;
-  padding-bottom: 0
+  padding-bottom: 0;
 }
 
 .filter-fabric {
@@ -2064,29 +2120,29 @@ background-color: var(--success);
   width: 220px;
   height: 1px;
   background: var(--black-opacity4);
-  margin-top: 30px;
+  margin-top: 24px;
 }
 
 .checkbox-list {
   padding:0;
   margin:0;
-  margin-left: 22px;
+  margin-left: -12px;
   margin-top: 15px;
 }
 
 .filter-checkbox label{
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .radio-list {
   padding:0;
   margin:0;
-  margin-left: 22px;
-  margin-top: 15px;
+  margin-left: -12px;
+  margin-top: 12px;
 }
 
 .filter-power label {
-  margin-bottom: 20px;
+  margin-bottom: 11px;
 }
 
 .filter-power legend {
