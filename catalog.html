@@ -24,8 +24,8 @@
         <form class="search-form" action="#" method="POST">
           <input type="search" placeholder="Поиск:">
         </form>
-        <a class="favorite" href="">Закладки: 0</a>
-        <a class="cart cart-fool" href="">Корзина: 10</a>
+        <a class="favorite" href="">Закладки:<span id="count-favorites">0</span></a>
+        <a class="cart" href="">Корзина:<span id="count-cart">0</span></a>
         <a class="order" href="">Оформить заказ</a>
       </div>
     </div>
@@ -109,7 +109,7 @@
                   <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="bosch"
                     id="filter-bosh" checked>
                   <label for="filter-bosh"><span class="icon-checkbox">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg aria-hidden="true" focusable="false" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z" fill="#C5C5C5"/>
                       </svg>
                   </span>Bosch</label>
@@ -118,7 +118,7 @@
                   <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="interskol"
                     id="filter-interskol">
                   <label for="filter-interskol"><span class="icon-checkbox">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg aria-hidden="true" focusable="false" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z" fill="#C5C5C5"/>
                       </svg>
                   </span>Интерскол</label>
@@ -127,7 +127,7 @@
                   <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="makita"
                     id="filter-makita" checked>
                   <label for="filter-makita"><span class="icon-checkbox">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg aria-hidden="true" focusable="false" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z" fill="#C5C5C5"/>
                       </svg>
                   </span>Makita</label>
@@ -136,7 +136,7 @@
                   <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="dewalt"
                     id="filter-dewalt">
                   <label for="filter-dewalt"><span class="icon-checkbox">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg aria-hidden="true" focusable="false" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z" fill="#C5C5C5"/>
                       </svg>
                   </span>Dewalt</label>
@@ -145,7 +145,7 @@
                   <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hitachi"
                     id="filter-hitachi">
                   <label for="filter-hitachi"><span class="icon-checkbox">
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg aria-hidden="true" focusable="false" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z" fill="#C5C5C5"/>
                       </svg>
                   </span>Hitachi</label>
@@ -363,7 +363,7 @@
   <footer class="page-footer main-footer">
     <div class="footer-panel-top">
       <div class="center">
-        <a href="/index.html"><img src="img/logo-footer.svg" width="220" height="68" alt="Логотип Техномарт"></a>
+        <a class="footer-logo" href="/index.html"><img src="img/logo-footer.svg" width="220" height="68" alt="Логотип Техномарт"></a>
         <nav class="footer-navigation-top">
           <ul class="footer-navigation-list">
             <li><a class="footer-navigation-button" href="#">Компания</a></li>

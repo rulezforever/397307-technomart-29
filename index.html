@@ -24,8 +24,8 @@
         <form class="search-form" action="#" method="POST">
           <input type="search" placeholder="Поиск:">
         </form>
-        <a class="favorite" href="">Закладки: 0</a>
-        <a class="cart" href="">Корзина: 0</a>
+        <a class="favorite" href="">Закладки:<span id="count-favorites">0</span></a>
+        <a class="cart" href="">Корзина:<span id="count-cart">0</span></a>
         <a class="order" href="">Оформить заказ</a>
       </div>
     </div>
@@ -87,10 +87,10 @@
           </li>
           <li class="products-item slider-collection">
             <div class="slider">
-              <input type="radio" name="v" class="slider-controls slider-control-1" id="btn-1" value="" checked>
-              <input type="radio" name="v" class="slider-controls slider-control-2" id="btn-2" value="">
+              <input type="radio" name="slider" class="slider-control-1 visually-hidden" id="btn-1" checked>
+              <input type="radio" name="slider" class="slider-control-2 visually-hidden" id="btn-2" >
               <div class="slider-controls">
-                <label for="btn-1"></label>
+                <label for="btn-1" ></label>
                 <label for="btn-2"></label>
               </div>
               <div class="slider-arrows">
@@ -210,11 +210,11 @@
         </p>
         <div class="services-columns">
           <ul class="services-names-list">
-            <li class="services-names-item"><button class="services-button button-delivery button-active"
+            <li class="services-names-item"><button class="services-button button-delivery button-active" aria-label="Доставка"
                 type="button">Доставка</button></li>
-            <li class="services-names-item"><button class="services-button button-guarantee"
+            <li class="services-names-item"><button class="services-button button-guarantee" aria-label="Гарантия"
                 type="button">Гарантия</button></li>
-            <li class="services-names-item"><button class="services-button button-credit" type="button">Кредит</button>
+            <li class="services-names-item"><button class="services-button button-credit" aria-label="Кредит" type="button">Кредит</button>
             </li>
           </ul>
           <ul class="services-description-list">
@@ -279,7 +279,7 @@
             Вы можете забрать товар сами,<br>
             заехав в наш офис:
           </p>
-          <a class="map-link" href="https://yandex.ru/maps/-/CKa0IIPp"><img class="information-map" src="img/map.jpg"
+          <a class="map-link" href="https://yandex.ru/maps/-/CKa0IIPp" aria-label="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"><img class="information-map" src="img/map.jpg"
               width="300" height="158" alt="map"></a>
           <a class="button information-contacts-button" href="writeus.html">Заблудились? Напишите нам!</a>
         </div>
@@ -289,7 +289,7 @@
   <footer class="page-footer main-footer">
     <div class="footer-panel-top">
       <div class="center">
-        <a href=""><img src="img/logo-footer.svg" width="220" height="68" alt="Логотип Техномарт"></a>
+        <a><img src="img/logo-footer.svg" width="220" height="68" alt="Логотип Техномарт"></a>
         <nav class="footer-navigation-top">
           <ul class="footer-navigation-list">
             <li><a class="footer-navigation-button" href="#">Компания</a></li>

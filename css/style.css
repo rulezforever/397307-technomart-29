@@ -49,6 +49,7 @@
   --shadow: #405069;
   --catalog-background: #F2F6F8;
   --green-shadow: #367315;
+  --blue: blue;
 }
 
 /* Global */
@@ -763,6 +764,10 @@ img {
   padding: 18px 0;
 }
 
+.footer-logo {
+  height: 68px;
+}
+
 .site-navigation a {
   padding: 18px 20px;
 }
@@ -918,6 +923,11 @@ img {
   padding-left: 5px;
 }
 
+.favorite span,
+.cart span {
+  margin-left: 5px;
+}
+
 .favorite::before {
   content: "";
   width: 14px;
@@ -934,13 +944,13 @@ img {
 
 .cart {
   position: relative;
-  margin-left: 3px;
+  margin-right: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 136px;
   height: 42px;
-  /* padding-left: 52px; */
+  padding-left: 15px;
 }
 
 .cart-fool,
@@ -957,7 +967,7 @@ img {
   background-position: 0 0;
   position: absolute;
   top: 12px;
-  left: 7px;
+  left: 20px;
   mix-blend-mode: normal;
   opacity: 0.3;
 }
@@ -1114,8 +1124,12 @@ img {
   padding-left: 24px;
 }
 
-.slider input {
-  display: none;
+#btn-1:focus ~ .slider-arrows [for="btn-1"] {
+  outline: 2px solid var(--blue);
+}
+
+#btn-2:focus ~ .slider-arrows [for="btn-2"] {
+  outline: 2px solid var(--blue);
 }
 
 .slider-control-1:checked ~ .slides > .slide-one {
@@ -1491,11 +1505,8 @@ img {
   outline: none;
 }
 
-.button-active {
-  background-color: var(--white);
-  color: var(--grey-dark);
-  box-shadow: 0px 1px 0px var(--white);
-  filter: drop-shadow(0px 1px 0px var()--white);
+.services-button:focus {
+  outline: 2px solid var(--blue);
 }
 
 .service {
@@ -1518,24 +1529,27 @@ img {
 
 .information-contacts {
   position: relative;
+  padding-top: 40px;
+  padding-left: 160px;
 }
 
 .information-map {
-  position: absolute;
-  bottom: 63px;
-  right: 0;
+  margin-top: 17px;
   background-color: var(--basic-background);
 }
 
+
+.map-link:focus {
+  display: block;
+  outline: 2px solid var(--blue);
+}
+
 .information-contacts h3 {
-  padding-top: 40px;
-  padding-left: 160px;
   margin-bottom: 0;
 }
 
 .information-contacts p {
   padding-top: 12px;
-  padding-left: 160px;
 }
 
 .information-about h3,
@@ -1687,6 +1701,14 @@ img {
   color: var(--white);
 }
 
+.button-active,
+.button-active:hover {
+  background-color: var(--white);
+  color: var(--grey-dark);
+  box-shadow: 0px 1px 0px var(--white);
+  filter: drop-shadow(0px 1px 0px var(--white));
+}
+
 .site-navigation-button:focus,
 .site-navigation-button:active {
   background-color: var(--grey-action);
@@ -1830,7 +1852,8 @@ background-color: var(--success);
   border-radius: 50%;
 }
 
-.social-button:hover::before {
+.social-button:hover::before,
+.social-button:focus::before {
   background-color: var(--basic-red);
 }
 
@@ -1869,9 +1892,7 @@ background-color: var(--success);
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  margin-top: 20px;
 }
 
 /* Catalog-page */
@@ -1978,91 +1999,6 @@ background-color: var(--success);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
-
-/* .filter-input-checkbox:hover + label::before {
-  background-image: url("../img/checkbox-off-hover.svg");
-}
-
-.filter-input-checkbox:checked:hover + label::after {
-  background-image: url("../img/checkbox-on-hover.svg");
-}
-
-.filter-input-checkbox:disabled + label::before {
-  background-image: url("../img/checkbox-off-hover.svg");
-  opacity: 0.3;
-}
-
-.filter-input-checkbox:checked:disabled + label::after {
-  background-image: url("../img/checkbox-on-hover.svg");
-  opacity: 0.3;
-}
-
-
-.filter-input-checkbox + label::before {
-  content: "";
-  position: absolute;
-  left: -22px;
-  top: 0px;
-  width: 23px;
-  height: 23px;
-  background-image: url("../img/checkbox-off.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.filter-input-checkbox:checked + label::after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: -22px;
-  width: 27px;
-  height: 23px;
-  background-image: url("../img/checkbox-on.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.filter-input-radio + label::before {
-  content: "";
-  position: absolute;
-  left: -22px;
-  top: 0px;
-  width: 25px;
-  height: 25px;
-  background-image: url(../img/radio-off.svg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.filter-input-radio:checked + label::after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: -22px;
-  width: 25px;
-  height: 25px;
-  background-image: url(../img/radio-on.svg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.filter-input-radio:hover + label::before {
-  background-image: url("../img/radio-off-hover.svg");
-}
-
-.filter-input-radio:checked:hover + label::after {
-  background-image: url("../img/radio-on-hover.svg");
-}
-
-.filter-input-radio:disabled + label::before {
-  background-image: url("../img/radio-off-hover.svg");
-  opacity: 0.3;
-}
-
-.filter-input-radio:checked:disabled + label::after {
-  background-image: url("../img/radio-on-hover.svg");
-  opacity: 0.3;
-} */
 
 .filter-button {
   font-family: "PT Sans",Arial, sans-serif;

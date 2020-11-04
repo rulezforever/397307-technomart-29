@@ -136,3 +136,31 @@ creditButton.addEventListener("click", function (evt) {
   item1.classList.remove("services-description-current");
   item2.classList.remove("services-description-current");
 });
+
+
+// ---Add Favorites & Cart
+
+const cart = document.querySelector(".cart");
+const fav = document.querySelector(".favorite");
+const cartLinks = document.querySelectorAll(".products-buy-button");
+const cartPopup = document.querySelector(".modal-cart");
+const countCart = document.querySelector("#count-cart");
+const countFav = document.querySelector("#count-favorites");
+const favLinks = document.querySelectorAll(".products-fav-button");
+
+
+cartLinks.forEach( (item) => {
+  item.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    cart.classList.add("cart-fool");
+    countCart.textContent = Number(countCart.textContent) + 1;
+  });
+});
+
+favLinks.forEach( (item) => {
+  item.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    fav.classList.add("favorite-add");
+    countFav.textContent = Number(countFav.textContent) + 1;
+  });
+});
