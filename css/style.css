@@ -322,24 +322,17 @@ img {
   background-image: url(../img/icon-user.svg);
 }
 
-.logout-button:after {
-  content: "";
-  width: 20px;
-  height: 17px;
-  background-image: url(../img/icon-logout.svg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  position: absolute;
-  top: 35px;
-  right: 16px;
+.logout-button {
+  margin-left: 20px;
+  margin-top: 5px;
 }
 
-.logout-button:hover:after {
-  background-image: url(../img/icon-logout-hover.svg);
+.logout-button:hover path {
+  fill: var(--basic-grey);
 }
 
-.logout-button:active:after {
-  background-image: url(../img/icon-logout.svg);
+.logout-button:active path {
+  fill: var(--basic-greylight);
 }
 
 .registration-wrapper {
@@ -457,10 +450,12 @@ img {
   border-bottom: 1px dotted var(--basic-red);
 }
 
-.sort-button:hover {
+.sort-button:hover,
+.sort-button:focus {
   opacity: 1;
   border-bottom: 1px solid var(--basic-red);
 }
+
 .sort-button-current {
   border: none;
   color: var(--basic-red);
@@ -1967,7 +1962,9 @@ background-color: var(--success);
 }
 
 .filter-input-checkbox:hover + label path,
-.filter-input-radio:hover + label path {
+.filter-input-radio:hover + label path,
+.filter-input-checkbox:focus + label path,
+.filter-input-radio:focus + label path {
   fill: var(--checkbox-grey);
 }
 
