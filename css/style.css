@@ -1962,10 +1962,13 @@ background-color: var(--success);
 }
 
 .filter-input-checkbox:hover + label path,
-.filter-input-radio:hover + label path,
-.filter-input-checkbox:focus + label path,
-.filter-input-radio:focus + label path {
+.filter-input-radio:hover + label path {
   fill: var(--checkbox-grey);
+}
+
+.filter-input-checkbox:focus + label ,
+.filter-input-radio:focus + label {
+  color: var(--blue);
 }
 
 .filter-input-checkbox:disabled + label path,
