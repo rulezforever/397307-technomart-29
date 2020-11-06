@@ -1966,9 +1966,9 @@ background-color: var(--success);
   fill: var(--checkbox-grey);
 }
 
-.filter-input-checkbox:focus + label ,
-.filter-input-radio:focus + label {
-  color: var(--blue);
+.filter-input-checkbox:focus + label svg ,
+.filter-input-radio:focus + label svg {
+  box-shadow: 0 0 0 2px;
 }
 
 .filter-input-checkbox:disabled + label path,
