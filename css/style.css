@@ -362,7 +362,7 @@ img {
       justify-content: space-around;
   width: 135px;
   padding-top:16px;
-  margin-left: 101px;
+  margin-left: 90px;
 }
 
 .container {
@@ -1396,6 +1396,10 @@ img {
   border: 2px solid var(--white);
 }
 
+.slider-controls label:focus,
+.slider-controls label:active {
+  box-shadow: 0 0 0 2px;
+}
 
 .slide-one {
   background-color: var(--basic-grey);
@@ -1678,6 +1682,7 @@ img {
 
 .services-message {
   margin-top: 25px;
+  width: 400px;
 }
 
 .services-names-list {
@@ -1834,6 +1839,7 @@ img {
 
 .information-contacts p {
   padding-top: 12px;
+  width:200px;
 }
 
 .information-about h3,
@@ -1854,6 +1860,11 @@ img {
 .information-about p {
   margin: 0;
   margin-top: 24px;
+  width: 450px;
+}
+
+.information-about p:nth-of-type(2) {
+  width: 430px;
 }
 
 .information-about-list {
@@ -1918,10 +1929,14 @@ img {
 }
 
 .create {
-  margin-left: 50px;
+  margin-left: 52px;
   padding-right: 0;
+  width: 97px;
 }
 
+.footer-copy {
+  width: 235px;
+}
 .email {
   margin-left: 140px;
 }

@@ -8,8 +8,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,12 +39,12 @@
       <div class="registration-wrapper">
         <p class="registration-login-name"><a class="login-button-name" href="">Равшан Джамшутович</a><a
             class="logout-button" href="" aria-label="Выход из аккаунта">
-            <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5" />
-              <path
+          <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5" />
+            <path
                 d="M2.10598 13.952V3.048C2.12398 2.672 2.27698 1.991 3.11598 1.991H8.14297V0H3.11598C0.937975 0 0.111975 1.81 0.0869751 3.027V13.973C0.111975 15.189 0.937975 17 3.11598 17H8.14297V15.01H3.11598C2.27698 15.01 2.12398 14.327 2.10598 13.952Z"
                 fill="#C5C5C5" />
-            </svg></a></p>
+          </svg></a></p>
         <ul class="registration-list registration-list-catalog">
           <li class="registration-item"><a class="login-button login-button-my-orders" href="">Мои заказы</a></li>
           <li class="registration-item"><a class="login-button login-button-personal" href="">Личный кабинет</a></li>
@@ -95,8 +95,8 @@
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
-                  <div class="toggle toggle-min" tabindex="0"></div>
-                  <div class="toggle toggle-max" tabindex="0"></div>
+                  <div class="toggle toggle-min" tabindex="0" aria-label="toggle-min"></div>
+                  <div class="toggle toggle-max" tabindex="0" aria-label="toggle-max"></div>
                 </div>
                 <div class="price-controls">
                   <label class="min-price">
@@ -116,60 +116,60 @@
                   <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="bosch"
                     id="filter-bosh" checked>
                   <label for="filter-bosh"><span class="icon-checkbox">
-                      <svg aria-hidden="true" focusable="false" width="23" height="23" viewBox="0 0 23 23" fill="none"
+                    <svg aria-hidden="true" focusable="false" width="23" height="23" viewBox="0 0 23 23" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                      <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"
                           fill="#C5C5C5" />
-                      </svg>
+                    </svg>
                     </span>Bosch</label>
                 </li>
                 <li class="filter-option filter-checkbox">
                   <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="interskol"
                     id="filter-interskol">
                   <label for="filter-interskol"><span class="icon-checkbox">
-                      <svg aria-hidden="true" focusable="false" width="23" height="23" viewBox="0 0 23 23" fill="none"
+                    <svg aria-hidden="true" focusable="false" width="23" height="23" viewBox="0 0 23 23" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                      <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"
                           fill="#C5C5C5" />
-                      </svg>
+                    </svg>
                     </span>Интерскол</label>
                 </li>
                 <li class="filter-option filter-checkbox">
                   <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="makita"
                     id="filter-makita" checked>
                   <label for="filter-makita"><span class="icon-checkbox">
-                      <svg aria-hidden="true" focusable="false" width="23" height="23" viewBox="0 0 23 23" fill="none"
+                    <svg aria-hidden="true" focusable="false" width="23" height="23" viewBox="0 0 23 23" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                      <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"
                           fill="#C5C5C5" />
-                      </svg>
+                    </svg>
                     </span>Makita</label>
                 </li>
                 <li class="filter-option filter-checkbox">
                   <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="dewalt"
                     id="filter-dewalt">
                   <label for="filter-dewalt"><span class="icon-checkbox">
-                      <svg aria-hidden="true" focusable="false" width="23" height="23" viewBox="0 0 23 23" fill="none"
+                    <svg aria-hidden="true" focusable="false" width="23" height="23" viewBox="0 0 23 23" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                      <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"
                           fill="#C5C5C5" />
-                      </svg>
+                    </svg>
                     </span>Dewalt</label>
                 </li>
                 <li class="filter-option filter-checkbox">
                   <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hitachi"
                     id="filter-hitachi">
                   <label for="filter-hitachi"><span class="icon-checkbox">
-                      <svg aria-hidden="true" focusable="false" width="23" height="23" viewBox="0 0 23 23" fill="none"
+                    <svg aria-hidden="true" focusable="false" width="23" height="23" viewBox="0 0 23 23" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                      <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"
                           fill="#C5C5C5" />
-                      </svg>
+                    </svg>
                     </span>Hitachi</label>
                 </li>
               </ul>
@@ -182,12 +182,12 @@
                   <input class="visually-hidden filter-input-radio filter-input" type="radio" name="power"
                     value="battery" id="filter-battery" checked>
                   <label for="filter-battery"><span class="icon-radio">
-                      <svg aria-hidden="true" width="25" height="25" viewBox="0 0 25 25" fill="none"
+                    <svg aria-hidden="true" width="25" height="25" viewBox="0 0 25 25" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
+                      <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M0 12.5C0 5.597 5.597 0 12.5 0C19.403 0 25 5.597 25 12.5C25 19.403 19.403 25 12.5 25C5.597 25 0 19.403 0 12.5ZM21 12.5C21 7.813 17.187 4 12.5 4C7.813 4 4 7.813 4 12.5C4 17.187 7.813 21 12.5 21C17.187 21 21 17.187 21 12.5Z"
                           fill="#C5C5C5" />
-                      </svg>
+                    </svg>
                     </span>Аккумуляторные</label>
                 </li>
                 <li class="filter-option filter-radio">
@@ -216,14 +216,14 @@
             <li class="sort-type"><button class="sort-button" type="button">По типу</button></li>
             <li class="sort-func"><button class="sort-button" type="button">По функционалу</button></li>
             <li class="sort-up sort-active"><a href="" aria-label="Сортировка по возрастанию">
-              <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.66241 0L11.1624 10L0.162415 10" fill="#C5C5C5" />
-              </svg></a>
+                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.66241 0L11.1624 10L0.162415 10" fill="#C5C5C5" />
+                </svg></a>
             </li>
             <li class="sort-down"><a href="" aria-label="Сортировка по убыванию">
-              <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.66241 0L11.1624 10L0.162415 10" fill="#C5C5C5" />
-              </svg></a>
+                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.66241 0L11.1624 10L0.162415 10" fill="#C5C5C5" />
+                </svg></a>
             </li>
           </ul>
 
@@ -391,7 +391,7 @@
   <footer class="page-footer main-footer">
     <div class="footer-panel-top">
       <div class="center">
-        <a class="footer-logo" href="/index.html"><img src="img/logo-footer.svg" width="220" height="68"
+        <a class="footer-logo" href="index.html"><img src="img/logo-footer.svg" width="220" height="68"
             alt="Логотип Техномарт"></a>
         <nav class="footer-navigation-top">
           <ul class="footer-navigation-list">
@@ -421,7 +421,7 @@
     </div>
     <div class="footer-panel-bottom">
       <div class="center">
-        <p class="footer-copy">&copy; 2010-2019 Компания &laquo;Техномарт&raquo;<br>Все права защищены</p>
+        <p class="footer-copy">&copy; 2010-2019 Компания &laquo;Техномарт&raquo; Все права защищены</p>
         <ul class="social-list">
           <li><a class="social-button vk-button" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
           <li><a class="social-button fb-button" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
@@ -432,7 +432,7 @@
           <address><a class="mailto" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></address>
         </div>
         <p class="create">
-          Разработано -<br>
+          Разработано -
           <a class="footer-url" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
       </div>

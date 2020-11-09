@@ -8,8 +8,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -91,7 +91,7 @@
               <input type="radio" name="slider" class="slider-control-1 visually-hidden" id="btn-1" checked>
               <input type="radio" name="slider" class="slider-control-2 visually-hidden" id="btn-2" >
               <div class="slider-controls">
-                <label for="btn-1" ></label>
+                <label for="btn-1"></label>
                 <label for="btn-2"></label>
               </div>
               <div class="slider-arrows">
@@ -207,7 +207,7 @@
       <div class="container">
         <h2>Сервисы</h2>
         <p class="services-message">
-          Хороший интернет-магазин отличается от плохого не только ценами!<br>
+          Хороший интернет-магазин отличается от плохого не только ценами!
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
         <div class="services-columns">
@@ -260,12 +260,12 @@
         <div class="information-about">
           <h3>Компания &laquo;Техномарт&raquo;</h3>
           <p>
-            Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для<br>
-            ремонта и строительства не оставит равнодушными любителей сэкономить на<br>
+            Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
+            ремонта и строительства не оставит равнодушными любителей сэкономить на
             гастарбайтерах.
           </p>
           <p>
-            Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+            Мы можем доставить ваш товар в самые отдаленные точки России!
             Техномарт работает со многими транспортными компаниями:
           </p>
           <ul class="information-about-list">
@@ -278,7 +278,7 @@
         <div class="information-contacts">
           <h3>Контакты</h3>
           <p>
-            Вы можете забрать товар сами,<br>
+            Вы можете забрать товар сами,
             заехав в наш офис:
           </p>
           <a class="map-link" href="https://yandex.ru/maps/-/CKa0IIPp" aria-label="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"><img class="information-map" src="img/map.jpg"
@@ -291,7 +291,7 @@
   <footer class="page-footer main-footer">
     <div class="footer-panel-top">
       <div class="center">
-        <a><img src="img/logo-footer.svg" width="220" height="68" alt="Логотип Техномарт"></a>
+        <a class="footer-logo" href="index.html"><img src="img/logo-footer.svg" width="220" height="68" alt="Логотип Техномарт"></a>
         <nav class="footer-navigation-top">
           <ul class="footer-navigation-list">
             <li><a class="footer-navigation-button" href="#">Компания</a></li>
@@ -320,7 +320,7 @@
     </div>
     <div class="footer-panel-bottom">
       <div class="center">
-        <p class="footer-copy">&copy; 2010-2019 Компания &laquo;Техномарт&raquo;<br>Все права защищены</p>
+        <p class="footer-copy">&copy; 2010-2019 Компания &laquo;Техномарт&raquo; Все права защищены</p>
         <ul class="social-list">
           <li><a class="social-button vk-button" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
           <li><a class="social-button fb-button" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
@@ -331,7 +331,7 @@
           <address><a class="mailto" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></address>
         </div>
         <p class="create">
-          Разработано -<br>
+          Разработано -
           <a class="footer-url" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
       </div>
@@ -371,6 +371,16 @@
       width="943" height="449" allowfullscreen="" aria-hidden="false"
       title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" tabindex="0"></iframe>
     <button class="modal-close" type="button" aria-label="Закрыть"></button>
+  </section>
+
+  <section class="modal modal-cart">
+    <h2 class="visually-hidden">Корзина</h2>
+    <p class="modal-cart-message">Товар добавлен в корзину!</p>
+    <div class="modal-cart-container">
+      <a class="button button-cart" href="">Оформить заказ</a>
+      <a class="button button-next" href="">Продолжить покупки</a>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    </div>
   </section>
   <script src="js/script.min.js"></script>
 </body>
