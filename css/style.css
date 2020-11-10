@@ -111,7 +111,8 @@ img {
 .main-header-logo {
   width: 220px;
   height: 42px;
-  display:inline-block;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .logo {
@@ -349,8 +350,8 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 0;
-  margin-left: 32px;
-  margin-top: -23px;
+  margin-left: 355px;
+  margin-top: -73px;
   padding-left: 5px;
 }
 
@@ -434,12 +435,13 @@ img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 299px;
-  height: 45px;
+  min-height: 45px;
   background: var(--white);
   margin: 0;
   padding-left: 58px;
   margin-left: 20px;
   margin-top:20px;
+  margin-bottom: -7px;
 }
 
 .registration-item .login-button-my-orders,
@@ -450,19 +452,18 @@ img {
   color: var(--grey-dark);
 }
 
+.registration-list-catalog {
+  width: 210px;
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-bottom: 0px;
+}
+
 .login-button-my-orders {
-  position: absolute;
-  top: 72px;
-  left: 65px;
+  position: relative;
 }
 
-.login-button-personal {
-  position: absolute;
-  top: 72px;
-  left: 172px;
-}
-
-.login-button-personal:before {
+.login-button-my-orders:after {
   content:"";
   width: 4px;
   height: 4px;
@@ -471,8 +472,8 @@ img {
   background: -o-linear-gradient(bottom, var(--grey-dark), var(--grey-dark)), var(--white);
   background: linear-gradient(0deg, var(--grey-dark), var(--grey-dark)), var(--white);
   position: absolute;
-  top: 8px;
-  left: -18px;
+  top: 9px;
+  left: 90px;
 }
 
 .catalog-container {
@@ -752,7 +753,7 @@ img {
 }
 
 .pagination-item a {
-  width: 38px;
+  min-width: 38px;
   height: 38px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -983,6 +984,7 @@ img {
   box-sizing: border-box;
   min-width: 150px;
   display: inline-block;
+  vertical-align: middle;
   padding-top: 10px;
   padding-bottom: 8px;
   padding-left: 20px;
@@ -1051,7 +1053,7 @@ img {
   display: -ms-flexbox;
   display: flex;
   width: 250px;
-  height: 24px;
+  min-height: 24px;
   margin: 0;
   padding: 0;
   padding-top: 3px;
@@ -1060,8 +1062,9 @@ img {
 .search-form {
   position: relative;
   display: inline-block;
-  margin-left: 40px;
-  padding-top: 10px;
+  vertical-align: middle;
+  min-width: 271px;
+  height: 42px;
 }
 
 .search-form input[type=search] {
@@ -1070,6 +1073,9 @@ img {
   border:none;
   border-style: none;
   outline: none;
+  height: 42px;
+  width: 271px;
+  padding-left: 43px;
 }
 
 .search-form:focus-within input[type=search] {
@@ -1110,7 +1116,7 @@ img {
   background-position: 0 0;
   position: absolute;
   top: 12px;
-  left: -23px;
+  left: 18px;
   mix-blend-mode: normal;
   opacity: 0.3;
 }
@@ -1133,8 +1139,8 @@ img {
   position: relative;
   min-width: 150px;
   display: inline-block;
+  vertical-align: middle;
   box-sizing: border-box;
-  margin-left: 78px;
   margin-right: 0px;
   padding-top: 10px;
   padding-bottom: 8px;
@@ -1164,6 +1170,7 @@ img {
 .cart {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   box-sizing: border-box;
   min-width: 136px;
   margin-left: 0px;
@@ -1210,56 +1217,21 @@ img {
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
-}
-
-.material,
-.instrument,
-.technics,
-.sale,
-.shipping {
-  position: relative;
-}
-
-.material h3,
-.instrument h3,
-.technics h3,
-.sale h3,
-.shipping h3 {
-  position: absolute;
-  top: -3px;
-  left: 23px;
+  width: 120px;
 }
 
 .products-button {
-  position: absolute;
   width: 135px;
   height: 38px;
-  -ms-flex-item-align: center;
-      align-self: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  top: 64px;
-  left: 23px;
+  display:block;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
   color: var(--white);
   background-color: var(--white-opacity2);
 }
 
-.material img {
-  position: absolute;
-  width: 44px;
-  height: 65px;
-  top: 31px;
-  left: 213px;
-}
-
-.material .icon-new {
+.products-item .icon-new {
   position: absolute;
   width: 70px;
   height: 70px;
@@ -1267,36 +1239,19 @@ img {
   left: 230px;
 }
 
-.instrument img {
-  position: absolute;
-  width: 75px;
-  height: 61px;
-  top: 34px;
-  left: 194px;
+.products-item {
+  padding-bottom: 20px;
+  position: relative;
 }
 
-.technics img {
-  position: absolute;
-  width: 78px;
-  height: 62px;
-  top: 31px;
-  left: 191px;
+.products-item h3 {
+  padding-left: 23px;
+  margin-bottom: 14px;
+  margin-top: 20px;
 }
 
-.sale img {
-  position: absolute;
-  width: 59px;
-  height: 72px;
-  top: 26px;
-  left: 196px;
-}
-
-.shipping img {
-  position: absolute;
-  width: 78px;
-  height: 63px;
-  top: 32px;
-  left: 191px;
+.products-item .products-button {
+  margin-left: 23px;
 }
 
 .products-item:nth-of-type(1) {
@@ -1319,6 +1274,65 @@ img {
   background-color: var(--special-yellowbright);
 }
 
+.products-item:nth-of-type(1):before {
+  content: "";
+  width: 44px;
+  height: 65px;
+  background-image: url("../img/materials-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: absolute;
+  top: 31px;
+  left: 215px;
+}
+
+.products-item:nth-of-type(2):before {
+  content: "";
+  width: 75px;
+  height: 61px;
+  background-image: url("../img/instrument-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: absolute;
+  top: 35px;
+  left: 195px;
+}
+
+.products-item:nth-of-type(3):before {
+  content: "";
+  width: 78px;
+  height: 62px;
+  background-image: url("../img/technicks-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: absolute;
+  top: 31px;
+  left: 190px;
+}
+
+.products-item:nth-of-type(4):before {
+  content: "";
+  width: 59px;
+  height: 71px;
+  background-image: url("../img/sale-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: absolute;
+  top: 25px;
+  left: 197px;
+}
+
+.products-item:nth-of-type(5):before {
+  content: "";
+  width: 78px;
+  height: 63px;
+  background-image: url("../img/shipping-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: absolute;
+  top: 31px;
+  left: 190px;
+}
 
 /* ----------------------Slider---------------------- */
 
@@ -1331,7 +1345,7 @@ img {
   padding: 0px;
   margin: 0;
   background-color:var(--basic-grey);
-  height: 266px;
+  min-height: 266px;
 }
 
 .slider-slide h3 {
@@ -1343,6 +1357,8 @@ img {
   text-transform: uppercase;
   padding-top: 23px;
   padding-left: 24px;
+  max-width: 400px;
+  min-height: 37px;
 }
 
 .slider-slide p {
@@ -1352,11 +1368,13 @@ img {
   padding-left: 24px;
 }
 
-#btn-1:focus ~ .slider-arrows [for="btn-1"] {
+#btn-1:focus ~ .slider-arrows [for="btn-1"],
+#btn-1:focus ~ .slider-controls [for="btn-1"] {
   outline: 2px solid var(--blue);
 }
 
-#btn-2:focus ~ .slider-arrows [for="btn-2"] {
+#btn-2:focus ~ .slider-arrows [for="btn-2"],
+#btn-2:focus ~ .slider-controls [for="btn-2"] {
   outline: 2px solid var(--blue);
 }
 
@@ -1387,6 +1405,7 @@ img {
 
 .slider-controls label {
   display: inline-block;
+  vertical-align: middle;
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -1494,7 +1513,7 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: var(--pink-background);
-  height: 89px;
+  min-height: 89px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1524,7 +1543,7 @@ img {
 .popular-fabric-wrapper .popular-fabric-action {
   margin-right: 19px;
   width: 192px;
-  height: 38px;
+  min-height: 38px;
   -ms-flex-item-align: center;
       align-self: center;
   display: -webkit-box;
@@ -1540,6 +1559,9 @@ img {
 
 .popular-fabric-wrapper h2 {
   margin-left: 28px;
+  width: 500px;
+  min-height: 35px;
+
 }
 
 .popular-products-item {
@@ -1714,13 +1736,13 @@ img {
 .delivery-image {
   position: absolute;
   right: 0px;
-  top: 77px;;
+  top: 77px;
 }
 
 .guarantee {
   padding-top: 26px;
   padding-bottom: 0;
-  margin-bottom:0;
+  margin-bottom: 0;
 }
 
 .guarantee-image {
@@ -1736,7 +1758,7 @@ img {
 .service-credit {
   padding-top: 26px;
   padding-bottom: 0;
-  margin-bottom:0;
+  margin-bottom: 0;
 }
 
 .credit-image {
@@ -1812,6 +1834,7 @@ img {
   font-size: 13px;
   line-height: 24px;
   color: var(--black);
+  max-width: 300px;
 }
 
 /* Contacts*/
@@ -1911,6 +1934,8 @@ img {
    margin: 0;
    margin-top: -5px;
    padding-left: 2px;
+   width: 400px;
+   min-height: 50px;
 }
 
 .footer-contacts a {
@@ -1973,7 +1998,7 @@ img {
   background-color: var(--hover-red);
 }
 
-.button:action {
+.button:active {
   background-color: var(--error);
 }
 
