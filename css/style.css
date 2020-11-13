@@ -1939,6 +1939,7 @@ img {
 }
 
 .footer-contacts a {
+  display: block;
   color: var(--white-cream);
 }
 
